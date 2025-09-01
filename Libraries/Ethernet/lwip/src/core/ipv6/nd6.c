@@ -1302,11 +1302,14 @@ nd6_send_na(struct netif *netif, const ip6_addr_t *target_addr, u8_t flags)
     ip6_addr_assign_zone(&multicast_address, IP6_MULTICAST, netif);
     dest_addr = &multicast_address;
   } else {
-    dest_addr = ip6_current_src_addr();
+
+      dest_addr = ip6_current_src_addr();
+      Ifx_Lwip_printf("[NA] Using Unicast dest (NS sender): %s\n", ip6addr_ntoa(dest_addr));
   }
 
 #if CHECKSUM_GEN_ICMP6
-  IF__NETIF_CHECKSUM_ENABLED(netif, NETIF_CHECKSUM_GEN_ICMP6) {
+  IF__NETIF_CHECKSUM_ENABLED(netif, NETIF_CHECKSUM_GEN_ICMP6)
+  {
     na_hdr->chksum = ip6_chksum_pseudo(p, IP6_NEXTH_ICMP6, p->len, src_addr,
       dest_addr);
   }

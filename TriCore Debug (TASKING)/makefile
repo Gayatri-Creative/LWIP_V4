@@ -43,14 +43,23 @@ RM := rm -rf
 -include Configurations/subdir.mk
 -include subdir.mk
 ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(C++M_DEPS)),)
+-include $(C++M_DEPS)
+endif
 ifneq ($(strip $(C++_DEPS)),)
 -include $(C++_DEPS)
+endif
+ifneq ($(strip $(CCM_DEPS)),)
+-include $(CCM_DEPS)
 endif
 ifneq ($(strip $(CC_DEPS)),)
 -include $(CC_DEPS)
 endif
 ifneq ($(strip $(CPP_DEPS)),)
 -include $(CPP_DEPS)
+endif
+ifneq ($(strip $(CXXM_DEPS)),)
+-include $(CXXM_DEPS)
 endif
 ifneq ($(strip $(CXX_DEPS)),)
 -include $(CXX_DEPS)
@@ -71,39 +80,44 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Ethernet_1_KIT_TC397_TFT
+BUILD_ARTIFACT_NAME := V6_V4_TCPIP
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 SECONDARY_SIZE += \
-Ethernet_1_KIT_TC397_TFT.siz \
+V6_V4_TCPIP.siz \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Ethernet_1_KIT_TC397_TFT.elf secondary-outputs
+main-build: V6_V4_TCPIP.elf secondary-outputs
 
 # Tool invocations
-Ethernet_1_KIT_TC397_TFT.elf: $(OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+V6_V4_TCPIP.elf: $(OBJS) makefile $(OPTIONAL_TOOL_DEPS) .V6_V4_TCPIP.elf.opt
 	@echo 'Building target: $@'
 	@echo 'Invoking: TASKING Linker'
-	cctc --lsl-file="../Lcf_Tasking_Tricore_Tc.lsl" -Wl-Oc -Wl-OL -Wl-Ot -Wl-Ox -Wl-Oy -Wl--map-file="Ethernet_1_KIT_TC397_TFT.map" -Wl-mc -Wl-mf -Wl-mi -Wl-mk -Wl-ml -Wl-mm -Wl-md -Wl-mr -Wl-mu --no-warnings= -Wl--error-limit=42 --fp-model=3 -lrt --lsl-core=vtc --exceptions --strict --anachronisms --force-c++ -Ctc39xb -o"Ethernet_1_KIT_TC397_TFT.elf" -Wl-o"Ethernet_1_KIT_TC397_TFT.hex:IHEX" $(OBJS)
+	cctc -f .V6_V4_TCPIP.elf.opt
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-Ethernet_1_KIT_TC397_TFT.siz: Ethernet_1_KIT_TC397_TFT.elf makefile $(OPTIONAL_TOOL_DEPS)
+.V6_V4_TCPIP.elf.opt:
+	@argfile .V6_V4_TCPIP.elf.opt --lsl-file="../Lcf_Tasking_Tricore_Tc.lsl" -Wl-Oc -Wl-OL -Wl-Ot -Wl-Ox -Wl-Oy -Wl--map-file="V6_V4_TCPIP.map" -Wl-mc -Wl-mf -Wl-mi -Wl-mk -Wl-ml -Wl-mm -Wl-md -Wl-mr -Wl-mu --no-warnings= -Wl--error-limit=42 --fp-model=3 -lrt --lsl-core=vtc --exceptions --strict --anachronisms --force-c++ -Ctc39xb -o"V6_V4_TCPIP.elf" -Wl-o"V6_V4_TCPIP.hex:IHEX" $(OBJS)
+
+.PHONY: .V6_V4_TCPIP.elf.opt
+
+V6_V4_TCPIP.siz: V6_V4_TCPIP.elf makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Invoking: Print Size'
-	elfsize  "Ethernet_1_KIT_TC397_TFT.elf"
+	elfsize  "V6_V4_TCPIP.elf"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Ethernet_1_KIT_TC397_TFT.siz Ethernet_1_KIT_TC397_TFT.elf
+	-$(RM) V6_V4_TCPIP.siz V6_V4_TCPIP.elf
 	-@echo ' '
 
 secondary-outputs: $(SECONDARY_SIZE)

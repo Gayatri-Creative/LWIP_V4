@@ -98,10 +98,21 @@
 #include "Configuration.h"
 #include <string.h>
 
+//--------------added files req for ipv6------------------------------//
+
+#include "lwip/ip.h"
+#include "lwip/prot/ip4.h"
+#include "lwip/icmp.h"
+#include "lwip/inet.h"
+
+#include "lwip/ethip6.h"
+
+//--------------------------------------------------------------------//
+
 /* Define those to better describe your network interface. */
 #define IFNAME0 'e'
 #define IFNAME1 'n'
-
+#define IFXGETH_DESC_OWN_MASK (1U << 31)
 /**
  * Helper struct to hold private data used to operate your ethernet interface.
  * Keeping the ethernet address of the MAC in this struct is not necessary
@@ -153,6 +164,9 @@ static void low_level_init(netif_t *netif)
     {
         netif->hwaddr[i] = g_Lwip.eth_addr.addr[i];
     }
+    Ifx_Lwip_printf("Board MAC Address set to: %02X:%02X:%02X:%02X:%02X:%02X\n",
+               netif->hwaddr[0], netif->hwaddr[1], netif->hwaddr[2],
+               netif->hwaddr[3], netif->hwaddr[4], netif->hwaddr[5]);
 
     /* maximum transfer unit */
     netif->mtu = 1500;
@@ -243,6 +257,11 @@ static void low_level_init(netif_t *netif)
         // initialize the module
     	IfxGeth_Eth_initModule(ethernetif, &GethConfig);
 
+        // Enable IPv6 multicast reception
+            MODULE_GETH.MAC_PACKET_FILTER.B.PM = 1;
+            Ifx_Lwip_printf("[ETH] Enabled multicast reception: PM = %d\n",
+                             MODULE_GETH.MAC_PACKET_FILTER.B.PM);
+
    		IfxGeth_Eth_Phy_Rtl8211f_init();
 
     	// and enable transmitter/receiver
@@ -306,6 +325,10 @@ static err_t low_level_output(netif_t *netif, pbuf_t *p)
     {
         // if PBUF_REF or PBUF_ROM, no copy into ethernet RAM buffer is needed.
         // see pbuf_alloc_special()
+
+        //-------------------------------------also can add logs for ipv6 ----------------------------//
+
+
     	IfxGeth_Eth_sendTransmitBuffer(ethernetif, p->tot_len, IfxGeth_TxDmaChannel_0);
     }
     else
@@ -435,6 +458,52 @@ static pbuf_t *low_level_input(netif_t *netif)
 #endif
 
         LINK_STATS_INC(link.recv);
+//-------------------------------------------------------fot ipv6-----------//
+        // === Log ICMP Echo Request source IP if present ===
+                if (p && p->payload)
+                {
+                    const u8_t *payload = (const u8_t *)p->payload;
+                    const struct eth_hdr *ethhdr = (const struct eth_hdr *)payload;
+                    u16_t eth_type = lwip_htons(ethhdr->type);
+
+                    if (eth_type == ETHTYPE_IP)
+                    {
+                        const struct ip_hdr *iphdr = (const struct ip_hdr *)(payload + SIZEOF_ETH_HDR);
+                        ip4_addr_t src;
+                        src.addr = iphdr->src.addr;
+
+                        if (IPH_PROTO(iphdr) == IP_PROTO_ICMP)
+                        {
+                            const struct icmp_echo_hdr *icmph = (const struct icmp_echo_hdr *)
+                                (payload + SIZEOF_ETH_HDR + (IPH_HL(iphdr) * 4));
+
+                            if (icmph->type == ICMP_ECHO)
+                            {
+                                Ifx_Lwip_printf("[PING] ICMP Echo Request received from %s\n", ip4addr_ntoa(&src));
+                            }
+                        }
+                    }
+                    else if(eth_type == ETHTYPE_IPV6)
+                    {
+                        const struct ip6_hdr *ip6hdr = (const struct ip6_hdr *)(payload + SIZEOF_ETH_HDR);
+#if LWIP_IPV6
+                            if (ip6hdr->_nexth == IP6_NEXTH_ICMP6)
+                            {
+                                const struct icmp6_echo_hdr *icmp6h = (const struct icmp6_echo_hdr *)
+                                    (payload + SIZEOF_ETH_HDR + sizeof(struct ip6_hdr));
+
+                                if (icmp6h->type == ICMP6_TYPE_EREQ) // Echo Request
+                                {
+                                    char ip6str[40];
+                                    ip6addr_ntoa_r((const ip6_addr_t *)&ip6hdr->src, ip6str, sizeof(ip6str));
+                                    Ifx_Lwip_printf("[PING][IPv6] ******ICMPv6 Echo Request received from %s\n", ip6str);
+                                }
+                            }
+
+#endif
+                    }
+                }
+
     }
     else
     {
@@ -480,6 +549,8 @@ err_t ifx_netif_input(netif_t *netif)
     /* IP or ARP packet? */
     case ETHTYPE_IP:
     case ETHTYPE_ARP:
+    case ETHTYPE_IPV6:                               //was missing for ipv6
+
 #if PPPOE_SUPPORT
     /* PPPoE packet? */
     case ETHTYPE_PPPOEDISC:
@@ -554,6 +625,9 @@ err_t ifx_netif_init(netif_t *netif)
      * from it if you have to do some checks before sending (e.g. if link
      * is available...) */
     netif->output     = etharp_output;
+#if LWIP_IPV6
+    netif->output_ip6 = ethip6_output;     // ✅ Let LWIP handle Ethernet header for ipv6
+#endif
     netif->linkoutput = low_level_output;
 
     /* initialize the hardware */

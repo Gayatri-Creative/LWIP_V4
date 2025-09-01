@@ -384,9 +384,9 @@ void Ifx_Lwip_init(eth_addr_t ethAddr)
     initUART();
 #endif
     ip_addr_t default_ipaddr, default_netmask, default_gw;
-    IP4_ADDR(&default_gw, 0,0,0,0);
-    IP4_ADDR(&default_ipaddr, 0,0,0,0);
-    IP4_ADDR(&default_netmask, 255,0,0,0);
+    IP_ADDR4(&default_gw, 0,0,0,0);
+    IP_ADDR4(&default_ipaddr, 0,0,0,0);
+    IP_ADDR4(&default_netmask, 255,0,0,0);
 
     LWIP_DEBUGF(IFX_LWIP_DEBUG, ("Ifx_Lwip_init start!\n"));
 
@@ -397,6 +397,28 @@ void Ifx_Lwip_init(eth_addr_t ethAddr)
     g_Lwip.eth_addr = ethAddr;
     netif_add(&g_Lwip.netif, &default_ipaddr, &default_netmask, &default_gw,
         (void *)0, ifx_netif_init, ethernet_input);
+
+    //--------------------------ipv6-------------------------------------------
+#if LWIP_IPV6
+    // Create IPv6 link-local address from MAC
+       netif_create_ip6_linklocal_address(&g_Lwip.netif, 1);
+       netif_ip6_addr_set_state(&g_Lwip.netif, 0, IP6_ADDR_PREFERRED);
+
+
+       // Print for confirmation
+          u8_t state = netif_ip6_addr_state(&g_Lwip.netif, 0);
+          // 🌐 Log IPv6 link-local address and zone
+          const ip6_addr_t *link_local = netif_ip6_addr(&g_Lwip.netif, 0);
+          u8_t zone_index = netif_get_index(&g_Lwip.netif);
+
+          Ifx_Lwip_printf("IPv6 link-local: %s\n", ip6addr_ntoa(netif_ip6_addr(&g_Lwip.netif, 0)));
+          Ifx_Lwip_printf("State = 0x%02X\n", state);
+          Ifx_Lwip_printf("Netif name: %c%c | Index (zone) = %d\n",
+                          g_Lwip.netif.name[0],
+                          g_Lwip.netif.name[1],
+                          zone_index);
+#endif
+
     netif_set_default(&g_Lwip.netif);
     netif_set_up(&g_Lwip.netif);
 
@@ -461,19 +483,27 @@ s8_t Ifx_Lwip_printf(const char *format, ...)
 {
 #ifdef __LWIP_DEBUG__
     char    str[MAXCHARS + 4];
+    char logBuf[MAXCHARS + 64];
     s8_t    result = ERR_CONN;
 
+
+    // Get timestamp
+        uint32 timestamp_ms = g_TickCount_1ms;
+        uint32 seconds = timestamp_ms / 1000;
+        uint32 millis = timestamp_ms % 1000;
+
+        // Format the log message
     va_list args;
     va_start(args, format);
     vsnprintf(str, MAXCHARS, format, args);
     va_end(args);
-    {
-        Ifx_SizeT cnt = 0;
-        while(str[cnt]!=0)
-            cnt++;
-        sendUARTMessage(str, cnt);
+
+    // Combine timestamp and message
+        Ifx_SizeT logLen = snprintf(logBuf, sizeof(logBuf), "[%lu.%03lu] %s", seconds, millis, str);
+
+        // Send over UART
+        sendUARTMessage(logBuf, logLen);
         sendUARTMessage("\r\n", 2);
-    }
 #endif
     return result;
 }

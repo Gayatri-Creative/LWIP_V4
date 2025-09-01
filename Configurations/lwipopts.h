@@ -43,6 +43,39 @@
 #define LWIP_SOCKET             0                   /* Disable the Socket API                                               */
 #define SYS_LIGHTWEIGHT_PROT    0                   /* Disable inter-task protection                                        */
 
+// ---------------------------------IPV6 changes start---------------------------------------------------//
+
+// Enable IPv6
+#define LWIP_IPV6                       1
+
+// Recommended: Enable ICMPv6 (required for ping)
+#define LWIP_ICMP6                      1
+
+// Enable IPv6 autoconfiguration (optional, but useful for link-local addresses)
+#define LWIP_IPV6_AUTOCONFIG            1
+
+// Enable MLD for IPv6 multicast (optional, but recommended)
+#define LWIP_IPV6_MLD                   0
+
+// Set the number of IPv6 addresses per netif (default is 3, increase if needed)
+#define LWIP_IPV6_NUM_ADDRESSES         3
+
+// Enable Neighbor Discovery (required for IPv6)
+#define LWIP_ND6_QUEUEING               1
+//added here which was missing//
+#define LWIP_IPV6_ICMP                          1
+#define ICMP6_DEBUG                        LWIP_DBG_ON
+#define IP6_DEBUG                          LWIP_DBG_ON
+#define ETHARP_DEBUG                       LWIP_DBG_ON
+#define ND6_DEBUG                          LWIP_DBG_ON
+#define LWIP_ND6_ALLOW_RA_UPDATES               1
+#define LWIP_IPV6_SEND_ROUTER_SOLICIT           1
+#define PBUF_DEBUG                         LWIP_DBG_ON
+#define MEM_DEBUG                          LWIP_DBG_ON
+#define LWIP_IPV6_SCOPES             1
+#define LWIP_IPV6_DUP_DETECT_ATTEMPTS 0
+
+// ------------------------------------------------IPV6 changes end ------------------------------------------------- //
 
 #define ETH_PAD_SIZE            2                   /* Add 2 bytes before the Ethernet header to ensure payload alignment   */
 
