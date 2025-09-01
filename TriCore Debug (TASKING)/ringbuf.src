@@ -1,0 +1,4107 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc10592a --dep-file=ringbuf.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc39xb -D__CPU_TC39XB__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc39xb -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Configurations -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\Phy_Rtl8211f -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\port -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\port\\\\include -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\port\\\\include\\\\arch -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix\\\\arpa -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix\\\\net -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\posix\\\\sys -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\compat\\\\stdc -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip\\\\apps -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip\\\\priv -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\lwip\\\\prot -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\netif -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\netif\\\\ppp -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Ethernet\\\\lwip\\\\src\\\\include\\\\netif\\\\ppp\\\\polarssl -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Infra -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Infra\\\\Sfr\\\\TC39B -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Infra\\\\Sfr\\\\TC39B\\\\_Reg -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Infra\\\\Ssw\\\\TC39B -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Infra\\\\Ssw\\\\TC39B\\\\Tricore -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Service -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Comm -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\UART -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Asclin\\\\Asc -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Geth -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Geth\\\\Eth -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Geth\\\\Std -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Pms -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Port -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Scu -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Src -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Stm -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\_Lib -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\_Lib\\\\DataHandling -IC:\\\\Users\\\\admin\\\\AURIX-v1.10.6-workspace\\\\Ethernet_1_KIT_TC397_TFT\\\\Libraries\\\\iLLD\\\\TC39B\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o ringbuf.src ../ringbuf.c"
+	.compiler_name		"ctc"
+	;source	'../ringbuf.c'
+
+	
+$TC162
+	
+	.sdecl	'.text.ringbuf.ringbuf_new',code,cluster('ringbuf_new')
+	.sect	'.text.ringbuf.ringbuf_new'
+	.align	2
+	
+	.global	ringbuf_new
+; Function ringbuf_new
+.L78:
+ringbuf_new:	.type	func
+	mov	d8,d4
+.L325:
+	mov	d4,#16
+.L324:
+	call	malloc
+.L326:
+	mov.aa	a15,a2
+.L328:
+	jz.a	a15,.L2
+.L475:
+	add	d15,d8,#1
+.L476:
+	st.w	[a15]12,d15
+.L477:
+	add	d4,d8,#1
+	call	malloc
+.L327:
+	st.a	[a15],a2
+.L478:
+	ld.w	d15,[a15]
+.L479:
+	jeq	d15,#0,.L3
+.L480:
+	mov.aa	a4,a15
+.L329:
+	call	ringbuf_reset
+.L330:
+	j	.L4
+.L3:
+	mov.aa	a4,a15
+.L331:
+	call	free
+.L332:
+	mov.a	a2,#0
+.L481:
+	j	.L5
+.L4:
+.L2:
+	mov.aa	a2,a15
+.L333:
+	j	.L6
+.L6:
+.L5:
+	ret
+.L229:
+	
+__ringbuf_new_function_end:
+	.size	ringbuf_new,__ringbuf_new_function_end-ringbuf_new
+.L127:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_reset',code,cluster('ringbuf_reset')
+	.sect	'.text.ringbuf.ringbuf_reset'
+	.align	2
+	
+	.global	ringbuf_reset
+; Function ringbuf_reset
+.L80:
+ringbuf_reset:	.type	func
+	ld.a	a15,[a4]
+.L505:
+	st.a	[a4]8,a15
+.L506:
+	st.a	[a4]4,a15
+.L507:
+	ret
+.L241:
+	
+__ringbuf_reset_function_end:
+	.size	ringbuf_reset,__ringbuf_reset_function_end-ringbuf_reset
+.L142:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_free',code,cluster('ringbuf_free')
+	.sect	'.text.ringbuf.ringbuf_free'
+	.align	2
+	
+	.global	ringbuf_free
+; Function ringbuf_free
+.L82:
+ringbuf_free:	.type	func
+	mov.aa	a15,a4
+.L335:
+	jz.a	a15,.L7
+.L486:
+	ld.w	d15,[a15]
+	jeq	d15,#0,.L8
+.L487:
+	ld.a	a2,[a15]
+.L488:
+	ld.a	a4,[a2]
+.L334:
+	call	free
+.L489:
+	ld.a	a4,[a15]
+	call	free
+.L490:
+	mov.a	a2,#0
+.L491:
+	st.a	[a15],a2
+.L8:
+.L7:
+	ret
+.L233:
+	
+__ringbuf_free_function_end:
+	.size	ringbuf_free,__ringbuf_free_function_end-ringbuf_free
+.L132:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_buffer_size',code,cluster('ringbuf_buffer_size')
+	.sect	'.text.ringbuf.ringbuf_buffer_size'
+	.align	2
+	
+	.global	ringbuf_buffer_size
+; Function ringbuf_buffer_size
+.L84:
+ringbuf_buffer_size:	.type	func
+	ld.w	d2,[a4]12
+.L517:
+	j	.L9
+.L9:
+	ret
+.L246:
+	
+__ringbuf_buffer_size_function_end:
+	.size	ringbuf_buffer_size,__ringbuf_buffer_size_function_end-ringbuf_buffer_size
+.L152:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_capacity',code,cluster('ringbuf_capacity')
+	.sect	'.text.ringbuf.ringbuf_capacity'
+	.align	2
+	
+	.global	ringbuf_capacity
+; Function ringbuf_capacity
+.L86:
+ringbuf_capacity:	.type	func
+	call	ringbuf_buffer_size
+.L336:
+	add	d2,#-1
+.L512:
+	j	.L10
+.L10:
+	ret
+.L243:
+	
+__ringbuf_capacity_function_end:
+	.size	ringbuf_capacity,__ringbuf_capacity_function_end-ringbuf_capacity
+.L147:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_end',code,cluster('ringbuf_end')
+	.sect	'.text.ringbuf.ringbuf_end'
+	.align	2
+	
+; Function ringbuf_end
+.L88:
+ringbuf_end:	.type	func
+	ld.a	a15,[a4]
+.L706:
+	call	ringbuf_buffer_size
+.L337:
+	addsc.a	a2,a15,d2,#0
+.L707:
+	j	.L11
+.L11:
+	ret
+.L319:
+	
+__ringbuf_end_function_end:
+	.size	ringbuf_end,__ringbuf_end_function_end-ringbuf_end
+.L222:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_bytes_free',code,cluster('ringbuf_bytes_free')
+	.sect	'.text.ringbuf.ringbuf_bytes_free'
+	.align	2
+	
+	.global	ringbuf_bytes_free
+; Function ringbuf_bytes_free
+.L90:
+ringbuf_bytes_free:	.type	func
+	mov.aa	a15,a4
+.L339:
+	ld.w	d15,[a15]4
+.L522:
+	ld.w	d0,[a15]8
+.L523:
+	jlt.u	d15,d0,.L12
+.L524:
+	mov.aa	a4,a15
+	call	ringbuf_capacity
+.L338:
+	ld.w	d15,[a15]4
+.L525:
+	ld.w	d0,[a15]8
+.L526:
+	sub	d15,d0
+.L527:
+	sub	d2,d15
+.L528:
+	j	.L13
+.L12:
+	ld.w	d15,[a15]8
+.L529:
+	ld.w	d0,[a15]4
+.L530:
+	sub	d15,d0
+.L531:
+	add	d2,d15,#-1
+.L532:
+	j	.L14
+.L14:
+.L13:
+	ret
+.L248:
+	
+__ringbuf_bytes_free_function_end:
+	.size	ringbuf_bytes_free,__ringbuf_bytes_free_function_end-ringbuf_bytes_free
+.L157:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_bytes_used',code,cluster('ringbuf_bytes_used')
+	.sect	'.text.ringbuf.ringbuf_bytes_used'
+	.align	2
+	
+	.global	ringbuf_bytes_used
+; Function ringbuf_bytes_used
+.L92:
+ringbuf_bytes_used:	.type	func
+	mov.aa	a15,a4
+.L341:
+	mov.aa	a4,a15
+	call	ringbuf_capacity
+.L340:
+	mov	d15,d2
+.L537:
+	mov.aa	a4,a15
+.L342:
+	call	ringbuf_bytes_free
+.L343:
+	sub	d2,d15,d2
+.L538:
+	j	.L15
+.L15:
+	ret
+.L250:
+	
+__ringbuf_bytes_used_function_end:
+	.size	ringbuf_bytes_used,__ringbuf_bytes_used_function_end-ringbuf_bytes_used
+.L162:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_is_full',code,cluster('ringbuf_is_full')
+	.sect	'.text.ringbuf.ringbuf_is_full'
+	.align	2
+	
+	.global	ringbuf_is_full
+; Function ringbuf_is_full
+.L94:
+ringbuf_is_full:	.type	func
+	call	ringbuf_bytes_free
+.L344:
+	eq	d2,d2,#0
+.L543:
+	j	.L16
+.L16:
+	ret
+.L253:
+	
+__ringbuf_is_full_function_end:
+	.size	ringbuf_is_full,__ringbuf_is_full_function_end-ringbuf_is_full
+.L167:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_is_empty',code,cluster('ringbuf_is_empty')
+	.sect	'.text.ringbuf.ringbuf_is_empty'
+	.align	2
+	
+	.global	ringbuf_is_empty
+; Function ringbuf_is_empty
+.L96:
+ringbuf_is_empty:	.type	func
+	mov.aa	a15,a4
+.L346:
+	mov.aa	a4,a15
+	call	ringbuf_bytes_free
+.L345:
+	mov	d15,d2
+.L548:
+	mov.aa	a4,a15
+.L347:
+	call	ringbuf_capacity
+.L348:
+	eq	d2,d15,d2
+.L549:
+	j	.L17
+.L17:
+	ret
+.L255:
+	
+__ringbuf_is_empty_function_end:
+	.size	ringbuf_is_empty,__ringbuf_is_empty_function_end-ringbuf_is_empty
+.L172:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_tail',code,cluster('ringbuf_tail')
+	.sect	'.text.ringbuf.ringbuf_tail'
+	.align	2
+	
+	.global	ringbuf_tail
+; Function ringbuf_tail
+.L98:
+ringbuf_tail:	.type	func
+	ld.a	a2,[a4]8
+.L554:
+	j	.L18
+.L18:
+	ret
+.L258:
+	
+__ringbuf_tail_function_end:
+	.size	ringbuf_tail,__ringbuf_tail_function_end-ringbuf_tail
+.L177:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_head',code,cluster('ringbuf_head')
+	.sect	'.text.ringbuf.ringbuf_head'
+	.align	2
+	
+	.global	ringbuf_head
+; Function ringbuf_head
+.L100:
+ringbuf_head:	.type	func
+	ld.a	a2,[a4]4
+.L559:
+	j	.L19
+.L19:
+	ret
+.L260:
+	
+__ringbuf_head_function_end:
+	.size	ringbuf_head,__ringbuf_head_function_end-ringbuf_head
+.L182:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_nextp',code,cluster('ringbuf_nextp')
+	.sect	'.text.ringbuf.ringbuf_nextp'
+	.align	2
+	
+; Function ringbuf_nextp
+.L102:
+ringbuf_nextp:	.type	func
+	sub.a	a10,#16
+.L349:
+	mov.aa	a12,a4
+.L352:
+	mov.aa	a15,a5
+.L354:
+	mov.d	d15,a15
+.L350:
+	ld.w	d0,[a12]
+	jlt.u	d15,d0,.L20
+	mov.aa	a4,a12
+	call	ringbuf_end
+.L351:
+	lt.a	d15,a15,a2
+.L356:
+	jne	d15,#0,.L21
+.L20:
+	movh.a	a15,#@his(.2.str)
+.L355:
+	lea	a15,[a15]@los(.2.str)
+	st.a	[a10],a15
+	movh.a	a15,#@his(.3.str)
+	lea	a15,[a15]@los(.3.str)
+	st.a	[a10]4,a15
+	mov	d15,#73
+	st.w	[a10]8,d15
+	movh.a	a4,#@his(.1.str)
+	lea	a4,[a4]@los(.1.str)
+	call	printf
+	call	abort
+	j	.L22
+.L353:
+	j	.L23
+.L21:
+.L23:
+	add.a	a15,#1
+.L712:
+	ld.a	a13,[a12]
+.L713:
+	ld.a	a2,[a12]
+.L714:
+	sub.a	a15,a15,a2
+.L357:
+	mov.d	d15,a15
+.L715:
+	mov.aa	a4,a12
+.L358:
+	call	ringbuf_buffer_size
+.L359:
+	div.u	e0,d15,d2
+.L716:
+	addsc.a	a2,a13,d1,#0
+.L717:
+	j	.L24
+.L24:
+.L22:
+	ret
+.L321:
+	
+__ringbuf_nextp_function_end:
+	.size	ringbuf_nextp,__ringbuf_nextp_function_end-ringbuf_nextp
+.L227:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_findchr',code,cluster('ringbuf_findchr')
+	.sect	'.text.ringbuf.ringbuf_findchr'
+	.align	2
+	
+	.global	ringbuf_findchr
+; Function ringbuf_findchr
+.L104:
+ringbuf_findchr:	.type	func
+	mov.aa	a15,a4
+.L361:
+	mov	d9,d4
+.L363:
+	mov	d10,d5
+.L364:
+	mov.aa	a4,a15
+	call	ringbuf_end
+.L360:
+	mov.aa	a12,a2
+.L366:
+	mov.aa	a4,a15
+.L367:
+	call	ringbuf_bytes_used
+.L365:
+	mov	d11,d2
+.L369:
+	jlt.u	d10,d11,.L25
+.L690:
+	mov	d2,d11
+	j	.L26
+.L25:
+	ld.a	a13,[a15]
+.L691:
+	ld.w	d15,[a15]8
+.L692:
+	ld.w	d0,[a15]
+.L693:
+	sub	d0,d15,d0
+.L694:
+	add	d8,d0,d10
+.L695:
+	mov.aa	a4,a15
+.L370:
+	call	ringbuf_buffer_size
+.L368:
+	div.u	e0,d8,d2
+.L696:
+	addsc.a	a13,a13,d1,#0
+.L371:
+	sub.a	a2,a12,a13
+.L372:
+	mov.d	d15,a2
+.L373:
+	sub	d0,d11,d10
+.L697:
+	jge.u	d0,d15,.L27
+.L698:
+	sub	d15,d11,d10
+.L27:
+	mov.aa	a4,a13
+.L374:
+	mov	e4,d15,d9
+	call	memchr
+.L375:
+	jz.a	a2,.L28
+.L699:
+	sub.a	a15,a2,a13
+.L362:
+	mov.d	d2,a15
+.L700:
+	add	d2,d10
+.L701:
+	j	.L29
+.L28:
+	add	d5,d15,d10
+	mov.aa	a4,a15
+.L377:
+	mov	d4,d9
+.L378:
+	call	ringbuf_findchr
+.L376:
+	j	.L30
+.L30:
+.L29:
+.L26:
+	ret
+.L310:
+	
+__ringbuf_findchr_function_end:
+	.size	ringbuf_findchr,__ringbuf_findchr_function_end-ringbuf_findchr
+.L217:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_memset',code,cluster('ringbuf_memset')
+	.sect	'.text.ringbuf.ringbuf_memset'
+	.align	2
+	
+	.global	ringbuf_memset
+; Function ringbuf_memset
+.L106:
+ringbuf_memset:	.type	func
+	sub.a	a10,#16
+.L379:
+	mov.aa	a15,a4
+.L381:
+	mov	d8,d4
+.L383:
+	mov	d15,d5
+.L385:
+	mov.aa	a4,a15
+	call	ringbuf_end
+.L380:
+	mov.aa	a12,a2
+.L388:
+	mov	d9,#0
+.L389:
+	mov.aa	a4,a15
+.L390:
+	call	ringbuf_buffer_size
+.L387:
+	jge.u	d15,d2,.L31
+.L605:
+	j	.L32
+.L31:
+	mov.aa	a4,a15
+.L391:
+	call	ringbuf_buffer_size
+.L386:
+	mov	d15,d2
+.L32:
+	mov.aa	a4,a15
+.L393:
+	call	ringbuf_bytes_free
+.L394:
+	lt.u	d10,d2,d15
+.L395:
+	j	.L33
+.L34:
+	ld.a	a2,[a15]4
+.L606:
+	sub.a	a2,a12,a2
+.L396:
+	mov.d	d11,a2
+.L397:
+	sub	d0,d15,d9
+.L607:
+	jge.u	d0,d11,.L35
+.L608:
+	sub	d11,d15,d9
+.L35:
+	ld.a	a4,[a15]4
+.L609:
+	mov	e4,d11,d8
+	call	memset
+.L610:
+	ld.a	a2,[a15]4
+.L611:
+	addsc.a	a2,a2,d11,#0
+	st.a	[a15]4,a2
+.L612:
+	add	d9,d11
+.L613:
+	ld.a	a2,[a15]4
+.L614:
+	jne.a	a2,a12,.L36
+.L615:
+	ld.a	a2,[a15]
+.L616:
+	st.a	[a15]4,a2
+.L36:
+.L33:
+	jne	d15,d9,.L34
+.L617:
+	jeq	d10,#0,.L37
+.L618:
+	ld.a	a5,[a15]4
+	mov.aa	a4,a15
+.L398:
+	call	ringbuf_nextp
+.L399:
+	st.a	[a15]8,a2
+.L619:
+	mov.aa	a4,a15
+.L400:
+	call	ringbuf_is_full
+.L401:
+	jne	d2,#0,.L38
+	movh.a	a15,#@his(.4.str)
+.L382:
+	lea	a15,[a15]@los(.4.str)
+	st.a	[a10],a15
+	movh.a	a15,#@his(.3.str)
+	lea	a15,[a15]@los(.3.str)
+	st.a	[a10]4,a15
+	mov	d15,#114
+.L392:
+	st.w	[a10]8,d15
+	movh.a	a4,#@his(.1.str)
+	lea	a4,[a4]@los(.1.str)
+	call	printf
+	call	abort
+	j	.L39
+.L384:
+	j	.L40
+.L38:
+.L40:
+.L37:
+	mov	d2,d15
+.L402:
+	j	.L41
+.L41:
+.L39:
+	ret
+.L270:
+	
+__ringbuf_memset_function_end:
+	.size	ringbuf_memset,__ringbuf_memset_function_end-ringbuf_memset
+.L197:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_memcpy_into',code,cluster('ringbuf_memcpy_into')
+	.sect	'.text.ringbuf.ringbuf_memcpy_into'
+	.align	2
+	
+	.global	ringbuf_memcpy_into
+; Function ringbuf_memcpy_into
+.L108:
+ringbuf_memcpy_into:	.type	func
+	sub.a	a10,#16
+.L403:
+	mov.aa	a15,a4
+.L405:
+	mov.aa	a12,a5
+.L407:
+	mov	d15,d4
+.L409:
+	mov.aa	a4,a15
+	call	ringbuf_end
+.L404:
+	mov.aa	a13,a2
+.L412:
+	mov.aa	a4,a15
+.L413:
+	call	ringbuf_bytes_free
+.L411:
+	lt.u	d8,d2,d15
+.L414:
+	mov	d9,#0
+.L415:
+	j	.L42
+.L43:
+	ld.a	a2,[a15]4
+.L624:
+	sub.a	a2,a13,a2
+.L416:
+	mov.d	d10,a2
+.L417:
+	sub	d0,d15,d9
+.L625:
+	jge.u	d0,d10,.L44
+.L626:
+	sub	d10,d15,d9
+.L44:
+	ld.a	a4,[a15]4
+.L627:
+	addsc.a	a5,a12,d9,#0
+.L628:
+	mov	d4,d10
+.L418:
+	call	memcpy
+.L419:
+	ld.a	a2,[a15]4
+.L629:
+	addsc.a	a2,a2,d10,#0
+	st.a	[a15]4,a2
+.L630:
+	add	d9,d10
+.L631:
+	ld.a	a2,[a15]4
+.L632:
+	jne.a	a2,a13,.L45
+.L633:
+	ld.a	a2,[a15]
+.L634:
+	st.a	[a15]4,a2
+.L45:
+.L42:
+	jne	d15,d9,.L43
+.L635:
+	jeq	d8,#0,.L46
+.L636:
+	ld.a	a5,[a15]4
+	mov.aa	a4,a15
+.L420:
+	call	ringbuf_nextp
+.L421:
+	st.a	[a15]8,a2
+.L637:
+	mov.aa	a4,a15
+.L422:
+	call	ringbuf_is_full
+.L423:
+	jne	d2,#0,.L47
+	movh.a	a15,#@his(.4.str)
+.L406:
+	lea	a15,[a15]@los(.4.str)
+	st.a	[a10],a15
+	movh.a	a15,#@his(.3.str)
+	lea	a15,[a15]@los(.3.str)
+	st.a	[a10]4,a15
+	mov	d15,#139
+.L410:
+	st.w	[a10]8,d15
+	movh.a	a4,#@his(.1.str)
+	lea	a4,[a4]@los(.1.str)
+	call	printf
+	call	abort
+	j	.L48
+.L408:
+	j	.L49
+.L47:
+.L49:
+.L46:
+	ld.a	a2,[a15]4
+.L638:
+	j	.L50
+.L50:
+.L48:
+	ret
+.L281:
+	
+__ringbuf_memcpy_into_function_end:
+	.size	ringbuf_memcpy_into,__ringbuf_memcpy_into_function_end-ringbuf_memcpy_into
+.L202:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_memcpy_from',code,cluster('ringbuf_memcpy_from')
+	.sect	'.text.ringbuf.ringbuf_memcpy_from'
+	.align	2
+	
+	.global	ringbuf_memcpy_from
+; Function ringbuf_memcpy_from
+.L110:
+ringbuf_memcpy_from:	.type	func
+	mov.aa	a12,a4
+.L426:
+	mov.aa	a15,a5
+.L427:
+	mov	d15,d4
+.L428:
+	mov.aa	a4,a15
+.L425:
+	call	ringbuf_bytes_used
+.L424:
+	jge.u	d2,d15,.L51
+.L643:
+	mov.a	a2,#0
+.L644:
+	j	.L52
+.L51:
+	mov.aa	a4,a15
+.L430:
+	call	ringbuf_end
+.L429:
+	mov.aa	a13,a2
+.L431:
+	mov	d8,#0
+.L432:
+	j	.L53
+.L54:
+	ld.a	a2,[a15]8
+.L645:
+	sub.a	a2,a13,a2
+.L433:
+	mov.d	d9,a2
+.L434:
+	sub	d0,d15,d8
+.L646:
+	jge.u	d0,d9,.L55
+.L647:
+	sub	d9,d15,d8
+.L55:
+	addsc.a	a4,a12,d8,#0
+.L648:
+	ld.a	a5,[a15]8
+.L649:
+	mov	d4,d9
+.L435:
+	call	memcpy
+.L436:
+	ld.a	a2,[a15]8
+.L650:
+	addsc.a	a2,a2,d9,#0
+	st.a	[a15]8,a2
+.L651:
+	add	d8,d9
+.L652:
+	ld.a	a2,[a15]8
+.L653:
+	jne.a	a2,a13,.L56
+.L654:
+	ld.a	a2,[a15]
+.L655:
+	st.a	[a15]8,a2
+.L56:
+.L53:
+	jne	d15,d8,.L54
+.L656:
+	ld.a	a2,[a15]8
+.L657:
+	j	.L57
+.L57:
+.L52:
+	ret
+.L290:
+	
+__ringbuf_memcpy_from_function_end:
+	.size	ringbuf_memcpy_from,__ringbuf_memcpy_from_function_end-ringbuf_memcpy_from
+.L207:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_copy',code,cluster('ringbuf_copy')
+	.sect	'.text.ringbuf.ringbuf_copy'
+	.align	2
+	
+	.global	ringbuf_copy
+; Function ringbuf_copy
+.L112:
+ringbuf_copy:	.type	func
+	sub.a	a10,#16
+.L437:
+	mov.aa	a15,a4
+.L440:
+	mov.aa	a12,a5
+.L442:
+	mov	d15,d4
+.L444:
+	mov.aa	a4,a12
+.L439:
+	call	ringbuf_bytes_used
+.L438:
+	jge.u	d2,d15,.L58
+.L662:
+	mov.a	a2,#0
+.L663:
+	j	.L59
+.L58:
+	mov.aa	a4,a15
+.L447:
+	call	ringbuf_bytes_free
+.L446:
+	lt.u	d8,d2,d15
+.L448:
+	mov.aa	a4,a12
+.L449:
+	call	ringbuf_end
+.L450:
+	mov.aa	a13,a2
+.L452:
+	mov.aa	a4,a15
+.L453:
+	call	ringbuf_end
+.L451:
+	mov.aa	a14,a2
+.L454:
+	mov	d9,#0
+.L455:
+	j	.L60
+.L61:
+	ld.a	a2,[a12]8
+.L664:
+	sub.a	a2,a13,a2
+.L456:
+	mov.d	d0,a2
+.L457:
+	sub	d1,d15,d9
+.L665:
+	jge.u	d1,d0,.L62
+.L666:
+	sub	d0,d15,d9
+.L62:
+	ld.a	a2,[a15]4
+.L667:
+	sub.a	a2,a14,a2
+.L459:
+	mov.d	d10,a2
+.L460:
+	jge.u	d0,d10,.L63
+.L668:
+	mov	d10,d0
+.L63:
+	ld.a	a4,[a15]4
+.L669:
+	ld.a	a5,[a12]8
+.L670:
+	mov	d4,d10
+.L461:
+	call	memcpy
+.L458:
+	ld.a	a2,[a12]8
+.L671:
+	addsc.a	a2,a2,d10,#0
+	st.a	[a12]8,a2
+.L672:
+	ld.a	a2,[a15]4
+.L673:
+	addsc.a	a2,a2,d10,#0
+	st.a	[a15]4,a2
+.L674:
+	add	d9,d10
+.L675:
+	ld.a	a2,[a12]8
+.L676:
+	jne.a	a2,a13,.L64
+.L677:
+	ld.a	a2,[a12]
+.L678:
+	st.a	[a12]8,a2
+.L64:
+	ld.a	a2,[a15]4
+.L679:
+	jne.a	a2,a14,.L65
+.L680:
+	ld.a	a2,[a15]
+.L681:
+	st.a	[a15]4,a2
+.L65:
+.L60:
+	jne	d15,d9,.L61
+.L682:
+	jeq	d8,#0,.L66
+.L683:
+	ld.a	a5,[a15]4
+	mov.aa	a4,a15
+.L462:
+	call	ringbuf_nextp
+.L463:
+	st.a	[a15]8,a2
+.L684:
+	mov.aa	a4,a15
+.L464:
+	call	ringbuf_is_full
+.L465:
+	jne	d2,#0,.L67
+	movh.a	a15,#@his(.4.str)
+.L441:
+	lea	a15,[a15]@los(.4.str)
+	st.a	[a10],a15
+	movh.a	a15,#@his(.3.str)
+	lea	a15,[a15]@los(.3.str)
+	st.a	[a10]4,a15
+	mov	d15,#196
+.L445:
+	st.w	[a10]8,d15
+	movh.a	a4,#@his(.1.str)
+	lea	a4,[a4]@los(.1.str)
+	call	printf
+	call	abort
+	j	.L68
+.L443:
+	j	.L69
+.L67:
+.L69:
+.L66:
+	ld.a	a2,[a15]4
+.L685:
+	j	.L70
+.L70:
+.L68:
+.L59:
+	ret
+.L299:
+	
+__ringbuf_copy_function_end:
+	.size	ringbuf_copy,__ringbuf_copy_function_end-ringbuf_copy
+.L212:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_init',code,cluster('ringbuf_init')
+	.sect	'.text.ringbuf.ringbuf_init'
+	.align	2
+	
+	.global	ringbuf_init
+; Function ringbuf_init
+.L114:
+ringbuf_init:	.type	func
+	st.a	[a4],a5
+.L496:
+	st.w	[a4]12,d4
+.L497:
+	ld.a	a15,[a4]
+.L498:
+	st.a	[a4]8,a15
+.L499:
+	st.a	[a4]4,a15
+.L500:
+	ret
+.L236:
+	
+__ringbuf_init_function_end:
+	.size	ringbuf_init,__ringbuf_init_function_end-ringbuf_init
+.L137:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_put',code,cluster('ringbuf_put')
+	.sect	'.text.ringbuf.ringbuf_put'
+	.align	2
+	
+	.global	ringbuf_put
+; Function ringbuf_put
+.L116:
+ringbuf_put:	.type	func
+	ld.w	d15,[a4]4
+.L564:
+	ld.w	d0,[a4]
+.L565:
+	sub	d15,d0
+.L566:
+	add	d0,d15,#1
+.L567:
+	ld.w	d15,[a4]12
+.L568:
+	div.u	e0,d0,d15
+.L466:
+	ld.w	d15,[a4]8
+.L569:
+	ld.w	d2,[a4]
+.L570:
+	sub	d15,d2
+.L571:
+	jne	d15,d1,.L71
+.L572:
+	mov	d2,#0
+.L573:
+	j	.L72
+.L71:
+	ld.a	a15,[a4]4
+.L574:
+	st.b	[a15],d4
+.L575:
+	ld.a	a15,[a4]
+.L576:
+	addsc.a	a15,a15,d1,#0
+.L577:
+	st.a	[a4]4,a15
+.L578:
+	mov	d2,#1
+.L579:
+	j	.L73
+.L73:
+.L72:
+	ret
+.L262:
+	
+__ringbuf_put_function_end:
+	.size	ringbuf_put,__ringbuf_put_function_end-ringbuf_put
+.L187:
+	; End of function
+	
+	.sdecl	'.text.ringbuf.ringbuf_get',code,cluster('ringbuf_get')
+	.sect	'.text.ringbuf.ringbuf_get'
+	.align	2
+	
+	.global	ringbuf_get
+; Function ringbuf_get
+.L118:
+ringbuf_get:	.type	func
+	ld.a	a15,[a4]4
+.L584:
+	ld.a	a2,[a4]8
+.L585:
+	jne.a	a15,a2,.L74
+.L586:
+	mov	d2,#0
+.L587:
+	j	.L75
+.L74:
+	ld.a	a15,[a4]8
+.L588:
+	ld.bu	d15,[a15]
+.L589:
+	st.b	[a5],d15
+.L590:
+	ld.a	a15,[a4]
+.L591:
+	ld.w	d15,[a4]8
+.L592:
+	ld.w	d0,[a4]
+.L593:
+	sub	d15,d0
+.L594:
+	add	d0,d15,#1
+.L595:
+	ld.w	d15,[a4]12
+.L596:
+	div.u	e0,d0,d15
+.L597:
+	addsc.a	a15,a15,d1,#0
+.L598:
+	st.a	[a4]8,a15
+.L599:
+	mov	d2,#1
+.L600:
+	j	.L76
+.L76:
+.L75:
+	ret
+.L267:
+	
+__ringbuf_get_function_end:
+	.size	ringbuf_get,__ringbuf_get_function_end-ringbuf_get
+.L192:
+	; End of function
+	
+	.sdecl	'.rodata.ringbuf..1.str',data,rom
+	.sect	'.rodata.ringbuf..1.str'
+.1.str:	.type	object
+	.size	.1.str,41
+	.byte	65,115,115,101,114,116,105,111
+	.byte	110,32,102,97,105,108,101,100
+	.byte	58,32,40,37,115,41,32,102
+	.byte	105,108,101,32,37,115,44,32
+	.byte	108,105,110,101,32,37,100,10
+	.space	1
+	.sdecl	'.rodata.ringbuf..2.str',data,rom
+	.sect	'.rodata.ringbuf..2.str'
+.2.str:	.type	object
+	.size	.2.str,40
+	.byte	40,112,32,62,61,32,114,98
+	.byte	45,62,98,117,102,41,32,38
+	.byte	38,32,40,112,32,60,32,114
+	.byte	105,110,103,98,117,102,95,101
+	.byte	110,100,40,114
+	.byte	98,41,41
+	.space	1
+	.sdecl	'.rodata.ringbuf..3.str',data,rom
+	.sect	'.rodata.ringbuf..3.str'
+.3.str:	.type	object
+	.size	.3.str,13
+	.byte	46,46,47,114,105,110,103,98
+	.byte	117,102,46,99
+	.space	1
+	.sdecl	'.rodata.ringbuf..4.str',data,rom
+	.sect	'.rodata.ringbuf..4.str'
+.4.str:	.type	object
+	.size	.4.str,21
+	.byte	114,105,110,103,98,117,102,95
+	.byte	105,115,95,102,117,108,108,40
+	.byte	100,115,116,41
+	.space	1
+	.calls	'ringbuf_new','malloc'
+	.calls	'ringbuf_new','ringbuf_reset'
+	.calls	'ringbuf_new','free'
+	.calls	'ringbuf_free','free'
+	.calls	'ringbuf_capacity','ringbuf_buffer_size'
+	.calls	'ringbuf_end','ringbuf_buffer_size'
+	.calls	'ringbuf_bytes_free','ringbuf_capacity'
+	.calls	'ringbuf_bytes_used','ringbuf_capacity'
+	.calls	'ringbuf_bytes_used','ringbuf_bytes_free'
+	.calls	'ringbuf_is_full','ringbuf_bytes_free'
+	.calls	'ringbuf_is_empty','ringbuf_bytes_free'
+	.calls	'ringbuf_is_empty','ringbuf_capacity'
+	.calls	'ringbuf_nextp','ringbuf_end'
+	.calls	'ringbuf_nextp','printf'
+	.calls	'ringbuf_nextp','abort'
+	.calls	'ringbuf_nextp','ringbuf_buffer_size'
+	.calls	'ringbuf_findchr','ringbuf_end'
+	.calls	'ringbuf_findchr','ringbuf_bytes_used'
+	.calls	'ringbuf_findchr','ringbuf_buffer_size'
+	.calls	'ringbuf_findchr','memchr'
+	.calls	'ringbuf_findchr','ringbuf_findchr'
+	.calls	'ringbuf_memset','ringbuf_end'
+	.calls	'ringbuf_memset','ringbuf_buffer_size'
+	.calls	'ringbuf_memset','ringbuf_bytes_free'
+	.calls	'ringbuf_memset','memset'
+	.calls	'ringbuf_memset','ringbuf_nextp'
+	.calls	'ringbuf_memset','ringbuf_is_full'
+	.calls	'ringbuf_memset','printf'
+	.calls	'ringbuf_memset','abort'
+	.calls	'ringbuf_memcpy_into','ringbuf_end'
+	.calls	'ringbuf_memcpy_into','ringbuf_bytes_free'
+	.calls	'ringbuf_memcpy_into','memcpy'
+	.calls	'ringbuf_memcpy_into','ringbuf_nextp'
+	.calls	'ringbuf_memcpy_into','ringbuf_is_full'
+	.calls	'ringbuf_memcpy_into','printf'
+	.calls	'ringbuf_memcpy_into','abort'
+	.calls	'ringbuf_memcpy_from','ringbuf_bytes_used'
+	.calls	'ringbuf_memcpy_from','ringbuf_end'
+	.calls	'ringbuf_memcpy_from','memcpy'
+	.calls	'ringbuf_copy','ringbuf_bytes_used'
+	.calls	'ringbuf_copy','ringbuf_bytes_free'
+	.calls	'ringbuf_copy','ringbuf_end'
+	.calls	'ringbuf_copy','memcpy'
+	.calls	'ringbuf_copy','ringbuf_nextp'
+	.calls	'ringbuf_copy','ringbuf_is_full'
+	.calls	'ringbuf_copy','printf'
+	.calls	'ringbuf_copy','abort'
+	.calls	'ringbuf_new','',0
+	.calls	'ringbuf_reset','',0
+	.calls	'ringbuf_free','',0
+	.calls	'ringbuf_buffer_size','',0
+	.calls	'ringbuf_capacity','',0
+	.calls	'ringbuf_end','',0
+	.calls	'ringbuf_bytes_free','',0
+	.calls	'ringbuf_bytes_used','',0
+	.calls	'ringbuf_is_full','',0
+	.calls	'ringbuf_is_empty','',0
+	.calls	'ringbuf_tail','',0
+	.calls	'ringbuf_head','',0
+	.calls	'ringbuf_nextp','',16
+	.calls	'ringbuf_findchr','',0
+	.calls	'ringbuf_memset','',16
+	.calls	'ringbuf_memcpy_into','',16
+	.calls	'ringbuf_memcpy_from','',0
+	.calls	'ringbuf_copy','',16
+	.calls	'ringbuf_init','',0
+	.calls	'ringbuf_put','',0
+	.extern	malloc
+	.extern	free
+	.extern	abort
+	.extern	memcpy
+	.extern	memchr
+	.extern	memset
+	.extern	printf
+	.extern	__printf_int
+	.calls	'ringbuf_get','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L120:
+	.word	839
+	.half	3
+	.word	.L121
+	.byte	4
+.L119:
+	.byte	1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L122
+.L264:
+	.byte	2
+	.byte	'unsigned char',0,1,8
+.L238:
+	.byte	3
+	.word	197
+.L230:
+	.byte	2
+	.byte	'unsigned int',0,4,7,4,1,7,9,16,5
+	.byte	'buf',0
+	.word	214
+	.byte	4,2,35,0,5
+	.byte	'head',0
+	.word	214
+	.byte	4,2,35,4,5
+	.byte	'tail',0
+	.word	214
+	.byte	4,2,35,8,5
+	.byte	'size',0
+	.word	219
+	.byte	4,2,35,12,0
+.L228:
+	.byte	3
+	.word	235
+.L234:
+	.byte	3
+	.word	296
+	.byte	6
+	.word	235
+.L244:
+	.byte	3
+	.word	306
+.L252:
+	.byte	2
+	.byte	'int',0,4,5,7
+	.byte	'void',0,6
+	.word	323
+.L257:
+	.byte	3
+	.word	329
+	.byte	6
+	.word	197
+.L274:
+	.byte	3
+	.word	339
+.L280:
+	.byte	3
+	.word	323
+	.byte	8
+	.byte	'malloc',0,2,78,33
+	.word	349
+	.byte	1,1,1,1,9,2,78,44
+	.word	219
+	.byte	0,10
+	.byte	'free',0,2,80,33,1,1,1,1,9,2,80,49
+	.word	349
+	.byte	0,11
+	.byte	'abort',0,2,103,33,1,1,1,1,12
+	.word	349
+	.byte	12
+	.word	334
+	.byte	8
+	.byte	'memcpy',0,3,53,17
+	.word	349
+	.byte	1,1,1,1,9,3,53,33
+	.word	418
+	.byte	9,3,53,56
+	.word	423
+	.byte	9,3,53,68
+	.word	219
+	.byte	0,8
+	.byte	'memchr',0,3,55,17
+	.word	349
+	.byte	1,1,1,1,9,3,55,39
+	.word	334
+	.byte	9,3,55,42
+	.word	316
+	.byte	9,3,55,47
+	.word	219
+	.byte	0,8
+	.byte	'memset',0,3,56,17
+	.word	349
+	.byte	1,1,1,1,9,3,56,33
+	.word	349
+	.byte	9,3,56,36
+	.word	316
+	.byte	9,3,56,41
+	.word	219
+	.byte	0,2
+	.byte	'char',0,1,6,6
+	.word	560
+	.byte	3
+	.word	568
+	.byte	12
+	.word	573
+	.byte	8
+	.byte	'printf',0,4,143,1,16
+	.word	316
+	.byte	1,1,1,1,9,4,143,1,38
+	.word	578
+	.byte	13,4,143,1,50,0,2
+	.byte	'short int',0,2,5,14
+	.byte	'__wchar_t',0,5,1,1
+	.word	618
+	.byte	14
+	.byte	'__size_t',0,5,1,1
+	.word	219
+	.byte	14
+	.byte	'__ptrdiff_t',0,5,1,1
+	.word	316
+	.byte	15,1,3
+	.word	686
+	.byte	14
+	.byte	'__codeptr',0,5,1,1
+	.word	688
+	.byte	14
+	.byte	'__intptr_t',0,5,1,1
+	.word	316
+	.byte	14
+	.byte	'__uintptr_t',0,5,1,1
+	.word	219
+	.byte	14
+	.byte	'size_t',0,6,24,25
+	.word	219
+	.byte	14
+	.byte	'uint8_t',0,7,242,1,41
+	.word	197
+	.byte	14
+	.byte	'ringbuf_t',0,1,11,3
+	.word	235
+	.byte	2
+	.byte	'unsigned short int',0,2,7,14
+	.byte	'_iob_flag_t',0,4,82,25
+	.word	800
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L121:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,15,0,73,19,0,0,4,19,1,58,15
+	.byte	59,15,57,15,11,15,0,0,5,13,0,3,8,73,19,11,15,56,9,0,0,6,38,0,73,19,0,0,7,59,0,3,8,0,0,8,46,1,3,8,58,15
+	.byte	59,15,57,15,73,19,54,15,39,12,63,12,60,12,0,0,9,5,0,58,15,59,15,57,15,73,19,0,0,10,46,1,3,8,58,15,59,15
+	.byte	57,15,54,15,39,12,63,12,60,12,0,0,11,46,0,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0,12,55,0,73
+	.byte	19,0,0,13,24,0,58,15,59,15,57,15,0,0,14,22,0,3,8,58,15,59,15,57,15,73,19,0,0,15,21,0,54,15,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L122:
+	.word	.L468-.L467
+.L467:
+	.half	3
+	.word	.L470-.L469
+.L469:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'C:\\Infineon\\AURIX-Studio-1.10.6\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0,0
+	.byte	'..\\ringbuf.h',0,0,0,0
+	.byte	'stdlib.h',0,1,0,0
+	.byte	'string.h',0,1,0,0
+	.byte	'stdio.h',0,1,0,0
+	.byte	'../ringbuf.c',0,0,0,0
+	.byte	'stddef.h',0,1,0,0
+	.byte	'stdint.h',0,1,0,0,0
+.L470:
+.L468:
+	.sdecl	'.debug_info',debug,cluster('ringbuf_new')
+	.sect	'.debug_info'
+.L123:
+	.word	285
+	.half	3
+	.word	.L124
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L126,.L125
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_new',0,1,6,12
+	.word	.L228
+	.byte	1,1,1
+	.word	.L78,.L229,.L77
+	.byte	4
+	.byte	'capacity',0,1,6,31
+	.word	.L230,.L231
+	.byte	5
+	.word	.L78,.L229
+	.byte	6
+	.byte	'rb',0,1,7,16
+	.word	.L228,.L232
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_new')
+	.sect	'.debug_abbrev'
+.L124:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_new')
+	.sect	'.debug_line'
+.L125:
+	.word	.L472-.L471
+.L471:
+	.half	3
+	.word	.L474-.L473
+.L473:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L474:
+	.byte	5,12,7,0,5,2
+	.word	.L78
+	.byte	3,5,1,5,28,9
+	.half	.L325-.L78
+	.byte	3,1,1,5,19,9
+	.half	.L326-.L325
+	.byte	1,5,5,9
+	.half	.L328-.L326
+	.byte	3,1,1,5,29,7,9
+	.half	.L475-.L328
+	.byte	3,1,1,5,18,9
+	.half	.L476-.L475
+	.byte	1,5,28,9
+	.half	.L477-.L476
+	.byte	3,1,1,5,17,9
+	.half	.L327-.L477
+	.byte	1,5,15,9
+	.half	.L478-.L327
+	.byte	3,1,1,5,9,9
+	.half	.L479-.L478
+	.byte	1,5,27,7,9
+	.half	.L480-.L479
+	.byte	3,1,1,5,30,9
+	.half	.L330-.L480
+	.byte	1,5,18,9
+	.half	.L3-.L330
+	.byte	3,2,1,5,20,9
+	.half	.L332-.L3
+	.byte	3,1,1,5,13,9
+	.half	.L481-.L332
+	.byte	1,5,5,9
+	.half	.L2-.L481
+	.byte	3,3,1,5,1,9
+	.half	.L5-.L2
+	.byte	3,1,1,7,9
+	.half	.L127-.L5
+	.byte	0,1,1
+.L472:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_new')
+	.sect	'.debug_ranges'
+.L126:
+	.word	-1,.L78,0,.L127-.L78,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_free')
+	.sect	'.debug_info'
+.L128:
+	.word	260
+	.half	3
+	.word	.L129
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L131,.L130
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_free',0,1,25,6,1,1,1
+	.word	.L82,.L233,.L81
+	.byte	4
+	.byte	'rb',0,1,25,31
+	.word	.L234,.L235
+	.byte	5
+	.word	.L82,.L233
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_free')
+	.sect	'.debug_abbrev'
+.L129:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_free')
+	.sect	'.debug_line'
+.L130:
+	.word	.L483-.L482
+.L482:
+	.half	3
+	.word	.L485-.L484
+.L484:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L485:
+	.byte	5,6,7,0,5,2
+	.word	.L82
+	.byte	3,24,1,5,9,9
+	.half	.L335-.L82
+	.byte	3,1,1,5,15,7,9
+	.half	.L486-.L335
+	.byte	1,9
+	.half	.L487-.L486
+	.byte	3,1,1,5,19,9
+	.half	.L488-.L487
+	.byte	1,5,14,9
+	.half	.L489-.L488
+	.byte	3,1,1,5,15,9
+	.half	.L490-.L489
+	.byte	3,1,1,5,13,9
+	.half	.L491-.L490
+	.byte	1,5,1,9
+	.half	.L7-.L491
+	.byte	3,2,1,7,9
+	.half	.L132-.L7
+	.byte	0,1,1
+.L483:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_free')
+	.sect	'.debug_ranges'
+.L131:
+	.word	-1,.L82,0,.L132-.L82,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_init')
+	.sect	'.debug_info'
+.L133:
+	.word	300
+	.half	3
+	.word	.L134
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L136,.L135
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_init',0,1,201,1,6,1,1,1
+	.word	.L114,.L236,.L113
+	.byte	4
+	.byte	'rb',0,1,201,1,30
+	.word	.L228,.L237
+	.byte	4
+	.byte	'buffer',0,1,201,1,43
+	.word	.L238,.L239
+	.byte	4
+	.byte	'size',0,1,201,1,58
+	.word	.L230,.L240
+	.byte	5
+	.word	.L114,.L236
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_init')
+	.sect	'.debug_abbrev'
+.L134:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_init')
+	.sect	'.debug_line'
+.L135:
+	.word	.L493-.L492
+.L492:
+	.half	3
+	.word	.L495-.L494
+.L494:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L495:
+	.byte	5,13,7,0,5,2
+	.word	.L114
+	.byte	3,202,1,1,5,14,9
+	.half	.L496-.L114
+	.byte	3,1,1,5,29,9
+	.half	.L497-.L496
+	.byte	3,1,1,5,25,9
+	.half	.L498-.L497
+	.byte	1,5,14,9
+	.half	.L499-.L498
+	.byte	1,5,1,9
+	.half	.L500-.L499
+	.byte	3,1,1,7,9
+	.half	.L137-.L500
+	.byte	0,1,1
+.L493:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_init')
+	.sect	'.debug_ranges'
+.L136:
+	.word	-1,.L114,0,.L137-.L114,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_reset')
+	.sect	'.debug_info'
+.L138:
+	.word	261
+	.half	3
+	.word	.L139
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L141,.L140
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_reset',0,1,21,6,1,1,1
+	.word	.L80,.L241,.L79
+	.byte	4
+	.byte	'rb',0,1,21,31
+	.word	.L228,.L242
+	.byte	5
+	.word	.L80,.L241
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_reset')
+	.sect	'.debug_abbrev'
+.L139:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_reset')
+	.sect	'.debug_line'
+.L140:
+	.word	.L502-.L501
+.L501:
+	.half	3
+	.word	.L504-.L503
+.L503:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L504:
+	.byte	5,29,7,0,5,2
+	.word	.L80
+	.byte	3,21,1,5,25,9
+	.half	.L505-.L80
+	.byte	1,5,14,9
+	.half	.L506-.L505
+	.byte	1,5,1,9
+	.half	.L507-.L506
+	.byte	3,1,1,7,9
+	.half	.L142-.L507
+	.byte	0,1,1
+.L502:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_reset')
+	.sect	'.debug_ranges'
+.L141:
+	.word	-1,.L80,0,.L142-.L80,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_capacity')
+	.sect	'.debug_info'
+.L143:
+	.word	268
+	.half	3
+	.word	.L144
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L146,.L145
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_capacity',0,1,37,8
+	.word	.L230
+	.byte	1,1,1
+	.word	.L86,.L243,.L85
+	.byte	4
+	.byte	'rb',0,1,37,42
+	.word	.L244,.L245
+	.byte	5
+	.word	.L86,.L243
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_capacity')
+	.sect	'.debug_abbrev'
+.L144:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_capacity')
+	.sect	'.debug_line'
+.L145:
+	.word	.L509-.L508
+.L508:
+	.half	3
+	.word	.L511-.L510
+.L510:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L511:
+	.byte	5,32,7,0,5,2
+	.word	.L86
+	.byte	3,37,1,5,36,9
+	.half	.L336-.L86
+	.byte	1,5,5,9
+	.half	.L512-.L336
+	.byte	1,5,1,9
+	.half	.L10-.L512
+	.byte	3,1,1,7,9
+	.half	.L147-.L10
+	.byte	0,1,1
+.L509:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_capacity')
+	.sect	'.debug_ranges'
+.L146:
+	.word	-1,.L86,0,.L147-.L86,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_buffer_size')
+	.sect	'.debug_info'
+.L148:
+	.word	271
+	.half	3
+	.word	.L149
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L151,.L150
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_buffer_size',0,1,33,8
+	.word	.L230
+	.byte	1,1,1
+	.word	.L84,.L246,.L83
+	.byte	4
+	.byte	'rb',0,1,33,45
+	.word	.L244,.L247
+	.byte	5
+	.word	.L84,.L246
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_buffer_size')
+	.sect	'.debug_abbrev'
+.L149:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_buffer_size')
+	.sect	'.debug_line'
+.L150:
+	.word	.L514-.L513
+.L513:
+	.half	3
+	.word	.L516-.L515
+.L515:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L516:
+	.byte	5,14,7,0,5,2
+	.word	.L84
+	.byte	3,33,1,5,5,9
+	.half	.L517-.L84
+	.byte	1,5,1,9
+	.half	.L9-.L517
+	.byte	3,1,1,7,9
+	.half	.L152-.L9
+	.byte	0,1,1
+.L514:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_buffer_size')
+	.sect	'.debug_ranges'
+.L151:
+	.word	-1,.L84,0,.L152-.L84,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_bytes_free')
+	.sect	'.debug_info'
+.L153:
+	.word	270
+	.half	3
+	.word	.L154
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L156,.L155
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_bytes_free',0,1,45,8
+	.word	.L230
+	.byte	1,1,1
+	.word	.L90,.L248,.L89
+	.byte	4
+	.byte	'rb',0,1,45,44
+	.word	.L244,.L249
+	.byte	5
+	.word	.L90,.L248
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_bytes_free')
+	.sect	'.debug_abbrev'
+.L154:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_bytes_free')
+	.sect	'.debug_line'
+.L155:
+	.word	.L519-.L518
+.L518:
+	.half	3
+	.word	.L521-.L520
+.L520:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L521:
+	.byte	5,8,7,0,5,2
+	.word	.L90
+	.byte	3,44,1,5,11,9
+	.half	.L339-.L90
+	.byte	3,1,1,5,23,9
+	.half	.L522-.L339
+	.byte	1,5,5,9
+	.half	.L523-.L522
+	.byte	1,5,33,7,9
+	.half	.L524-.L523
+	.byte	3,1,1,5,42,9
+	.half	.L338-.L524
+	.byte	1,5,53,9
+	.half	.L525-.L338
+	.byte	1,5,49,9
+	.half	.L526-.L525
+	.byte	1,5,37,9
+	.half	.L527-.L526
+	.byte	1,5,9,9
+	.half	.L528-.L527
+	.byte	1,5,18,9
+	.half	.L12-.L528
+	.byte	3,2,1,5,29,9
+	.half	.L529-.L12
+	.byte	1,5,25,9
+	.half	.L530-.L529
+	.byte	1,5,36,9
+	.half	.L531-.L530
+	.byte	1,5,9,9
+	.half	.L532-.L531
+	.byte	1,5,1,9
+	.half	.L13-.L532
+	.byte	3,1,1,7,9
+	.half	.L157-.L13
+	.byte	0,1,1
+.L519:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_bytes_free')
+	.sect	'.debug_ranges'
+.L156:
+	.word	-1,.L90,0,.L157-.L90,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_bytes_used')
+	.sect	'.debug_info'
+.L158:
+	.word	270
+	.half	3
+	.word	.L159
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L161,.L160
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_bytes_used',0,1,52,8
+	.word	.L230
+	.byte	1,1,1
+	.word	.L92,.L250,.L91
+	.byte	4
+	.byte	'rb',0,1,52,44
+	.word	.L244,.L251
+	.byte	5
+	.word	.L92,.L250
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_bytes_used')
+	.sect	'.debug_abbrev'
+.L159:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_bytes_used')
+	.sect	'.debug_line'
+.L160:
+	.word	.L534-.L533
+.L533:
+	.half	3
+	.word	.L536-.L535
+.L535:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L536:
+	.byte	5,8,7,0,5,2
+	.word	.L92
+	.byte	3,51,1,5,29,9
+	.half	.L341-.L92
+	.byte	3,1,1,5,33,9
+	.half	.L340-.L341
+	.byte	1,5,54,9
+	.half	.L537-.L340
+	.byte	1,5,33,9
+	.half	.L343-.L537
+	.byte	1,5,5,9
+	.half	.L538-.L343
+	.byte	1,5,1,9
+	.half	.L15-.L538
+	.byte	3,1,1,7,9
+	.half	.L162-.L15
+	.byte	0,1,1
+.L534:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_bytes_used')
+	.sect	'.debug_ranges'
+.L161:
+	.word	-1,.L92,0,.L162-.L92,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_is_full')
+	.sect	'.debug_info'
+.L163:
+	.word	267
+	.half	3
+	.word	.L164
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L166,.L165
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_is_full',0,1,56,5
+	.word	.L252
+	.byte	1,1,1
+	.word	.L94,.L253,.L93
+	.byte	4
+	.byte	'rb',0,1,56,38
+	.word	.L244,.L254
+	.byte	5
+	.word	.L94,.L253
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_is_full')
+	.sect	'.debug_abbrev'
+.L164:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_is_full')
+	.sect	'.debug_line'
+.L165:
+	.word	.L540-.L539
+.L539:
+	.half	3
+	.word	.L542-.L541
+.L541:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L542:
+	.byte	5,31,7,0,5,2
+	.word	.L94
+	.byte	3,56,1,5,35,9
+	.half	.L344-.L94
+	.byte	1,5,5,9
+	.half	.L543-.L344
+	.byte	1,5,1,9
+	.half	.L16-.L543
+	.byte	3,1,1,7,9
+	.half	.L167-.L16
+	.byte	0,1,1
+.L540:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_is_full')
+	.sect	'.debug_ranges'
+.L166:
+	.word	-1,.L94,0,.L167-.L94,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_is_empty')
+	.sect	'.debug_info'
+.L168:
+	.word	268
+	.half	3
+	.word	.L169
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L171,.L170
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_is_empty',0,1,60,5
+	.word	.L252
+	.byte	1,1,1
+	.word	.L96,.L255,.L95
+	.byte	4
+	.byte	'rb',0,1,60,39
+	.word	.L244,.L256
+	.byte	5
+	.word	.L96,.L255
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_is_empty')
+	.sect	'.debug_abbrev'
+.L169:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_is_empty')
+	.sect	'.debug_line'
+.L170:
+	.word	.L545-.L544
+.L544:
+	.half	3
+	.word	.L547-.L546
+.L546:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L547:
+	.byte	5,5,7,0,5,2
+	.word	.L96
+	.byte	3,59,1,5,31,9
+	.half	.L346-.L96
+	.byte	3,1,1,5,35,9
+	.half	.L345-.L346
+	.byte	1,5,55,9
+	.half	.L548-.L345
+	.byte	1,5,35,9
+	.half	.L348-.L548
+	.byte	1,5,5,9
+	.half	.L549-.L348
+	.byte	1,5,1,9
+	.half	.L17-.L549
+	.byte	3,1,1,7,9
+	.half	.L172-.L17
+	.byte	0,1,1
+.L545:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_is_empty')
+	.sect	'.debug_ranges'
+.L171:
+	.word	-1,.L96,0,.L172-.L96,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_tail')
+	.sect	'.debug_info'
+.L173:
+	.word	264
+	.half	3
+	.word	.L174
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L176,.L175
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_tail',0,1,64,13
+	.word	.L257
+	.byte	1,1,1
+	.word	.L98,.L258,.L97
+	.byte	4
+	.byte	'rb',0,1,64,43
+	.word	.L244,.L259
+	.byte	5
+	.word	.L98,.L258
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_tail')
+	.sect	'.debug_abbrev'
+.L174:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_tail')
+	.sect	'.debug_line'
+.L175:
+	.word	.L551-.L550
+.L550:
+	.half	3
+	.word	.L553-.L552
+.L552:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L553:
+	.byte	5,14,7,0,5,2
+	.word	.L98
+	.byte	3,192,0,1,5,5,9
+	.half	.L554-.L98
+	.byte	1,5,1,9
+	.half	.L18-.L554
+	.byte	3,1,1,7,9
+	.half	.L177-.L18
+	.byte	0,1,1
+.L551:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_tail')
+	.sect	'.debug_ranges'
+.L176:
+	.word	-1,.L98,0,.L177-.L98,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_head')
+	.sect	'.debug_info'
+.L178:
+	.word	264
+	.half	3
+	.word	.L179
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L181,.L180
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_head',0,1,68,13
+	.word	.L257
+	.byte	1,1,1
+	.word	.L100,.L260,.L99
+	.byte	4
+	.byte	'rb',0,1,68,43
+	.word	.L244,.L261
+	.byte	5
+	.word	.L100,.L260
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_head')
+	.sect	'.debug_abbrev'
+.L179:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_head')
+	.sect	'.debug_line'
+.L180:
+	.word	.L556-.L555
+.L555:
+	.half	3
+	.word	.L558-.L557
+.L557:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L558:
+	.byte	5,14,7,0,5,2
+	.word	.L100
+	.byte	3,196,0,1,5,5,9
+	.half	.L559-.L100
+	.byte	1,5,1,9
+	.half	.L19-.L559
+	.byte	3,1,1,7,9
+	.half	.L182-.L19
+	.byte	0,1,1
+.L556:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_head')
+	.sect	'.debug_ranges'
+.L181:
+	.word	-1,.L100,0,.L182-.L100,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_put')
+	.sect	'.debug_info'
+.L183:
+	.word	302
+	.half	3
+	.word	.L184
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L186,.L185
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_put',0,1,208,1,5
+	.word	.L252
+	.byte	1,1,1
+	.word	.L116,.L262,.L115
+	.byte	4
+	.byte	'rb',0,1,208,1,28
+	.word	.L228,.L263
+	.byte	4
+	.byte	'data',0,1,208,1,40
+	.word	.L264,.L265
+	.byte	5
+	.word	.L116,.L262
+	.byte	6
+	.byte	'next',0,1,210,1,12
+	.word	.L230,.L266
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_put')
+	.sect	'.debug_abbrev'
+.L184:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_put')
+	.sect	'.debug_line'
+.L185:
+	.word	.L561-.L560
+.L560:
+	.half	3
+	.word	.L563-.L562
+.L562:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L563:
+	.byte	5,22,7,0,5,2
+	.word	.L116
+	.byte	3,209,1,1,5,33,9
+	.half	.L564-.L116
+	.byte	1,5,29,9
+	.half	.L565-.L564
+	.byte	1,5,39,9
+	.half	.L566-.L565
+	.byte	1,5,48,9
+	.half	.L567-.L566
+	.byte	1,5,44,9
+	.half	.L568-.L567
+	.byte	1,5,20,9
+	.half	.L466-.L568
+	.byte	3,1,1,5,31,9
+	.half	.L569-.L466
+	.byte	1,5,27,9
+	.half	.L570-.L569
+	.byte	1,5,5,9
+	.half	.L571-.L570
+	.byte	1,5,16,7,9
+	.half	.L572-.L571
+	.byte	3,1,1,5,9,9
+	.half	.L573-.L572
+	.byte	1,9
+	.half	.L71-.L573
+	.byte	3,2,1,5,17,9
+	.half	.L574-.L71
+	.byte	1,5,18,9
+	.half	.L575-.L574
+	.byte	3,1,1,5,24,9
+	.half	.L576-.L575
+	.byte	1,5,14,9
+	.half	.L577-.L576
+	.byte	1,5,12,9
+	.half	.L578-.L577
+	.byte	3,1,1,5,5,9
+	.half	.L579-.L578
+	.byte	1,5,1,9
+	.half	.L72-.L579
+	.byte	3,1,1,7,9
+	.half	.L187-.L72
+	.byte	0,1,1
+.L561:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_put')
+	.sect	'.debug_ranges'
+.L186:
+	.word	-1,.L116,0,.L187-.L116,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_get')
+	.sect	'.debug_info'
+.L188:
+	.word	283
+	.half	3
+	.word	.L189
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L191,.L190
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_get',0,1,219,1,5
+	.word	.L252
+	.byte	1,1,1
+	.word	.L118,.L267,.L117
+	.byte	4
+	.byte	'rb',0,1,219,1,28
+	.word	.L228,.L268
+	.byte	4
+	.byte	'data',0,1,219,1,41
+	.word	.L238,.L269
+	.byte	5
+	.word	.L118,.L267
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_get')
+	.sect	'.debug_abbrev'
+.L189:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_get')
+	.sect	'.debug_line'
+.L190:
+	.word	.L581-.L580
+.L580:
+	.half	3
+	.word	.L583-.L582
+.L582:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L583:
+	.byte	5,11,7,0,5,2
+	.word	.L118
+	.byte	3,220,1,1,5,23,9
+	.half	.L584-.L118
+	.byte	1,5,5,9
+	.half	.L585-.L584
+	.byte	1,5,16,7,9
+	.half	.L586-.L585
+	.byte	3,1,1,5,9,9
+	.half	.L587-.L586
+	.byte	1,5,17,9
+	.half	.L74-.L587
+	.byte	3,2,1,5,13,9
+	.half	.L588-.L74
+	.byte	1,5,11,9
+	.half	.L589-.L588
+	.byte	1,5,18,9
+	.half	.L590-.L589
+	.byte	3,1,1,5,30,9
+	.half	.L591-.L590
+	.byte	1,5,41,9
+	.half	.L592-.L591
+	.byte	1,5,37,9
+	.half	.L593-.L592
+	.byte	1,5,47,9
+	.half	.L594-.L593
+	.byte	1,5,56,9
+	.half	.L595-.L594
+	.byte	1,5,52,9
+	.half	.L596-.L595
+	.byte	1,5,24,9
+	.half	.L597-.L596
+	.byte	1,5,14,9
+	.half	.L598-.L597
+	.byte	1,5,12,9
+	.half	.L599-.L598
+	.byte	3,1,1,5,5,9
+	.half	.L600-.L599
+	.byte	1,5,1,9
+	.half	.L75-.L600
+	.byte	3,1,1,7,9
+	.half	.L192-.L75
+	.byte	0,1,1
+.L581:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_get')
+	.sect	'.debug_ranges'
+.L191:
+	.word	-1,.L118,0,.L192-.L118,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_memset')
+	.sect	'.debug_info'
+.L193:
+	.word	401
+	.half	3
+	.word	.L194
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L196,.L195
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_memset',0,1,95,8
+	.word	.L230
+	.byte	1,1,1
+	.word	.L106,.L270,.L105
+	.byte	4
+	.byte	'dst',0,1,95,34
+	.word	.L228,.L271
+	.byte	4
+	.byte	'c',0,1,95,43
+	.word	.L252,.L272
+	.byte	4
+	.byte	'len',0,1,95,53
+	.word	.L230,.L273
+	.byte	5
+	.word	.L106,.L270
+	.byte	6
+	.byte	'bufend',0,1,96,20
+	.word	.L274,.L275
+	.byte	6
+	.byte	'nwritten',0,1,97,12
+	.word	.L230,.L276
+	.byte	6
+	.byte	'count',0,1,98,12
+	.word	.L230,.L277
+	.byte	6
+	.byte	'overflow',0,1,99,9
+	.word	.L252,.L278
+	.byte	5
+	.word	.L34,.L33
+	.byte	6
+	.byte	'n',0,1,102,16
+	.word	.L230,.L279
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_memset')
+	.sect	'.debug_abbrev'
+.L194:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_memset')
+	.sect	'.debug_line'
+.L195:
+	.word	.L602-.L601
+.L601:
+	.half	3
+	.word	.L604-.L603
+.L603:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L604:
+	.byte	5,8,7,0,5,2
+	.word	.L106
+	.byte	3,222,0,1,5,41,9
+	.half	.L385-.L106
+	.byte	3,1,1,5,27,9
+	.half	.L380-.L385
+	.byte	1,5,21,9
+	.half	.L388-.L380
+	.byte	3,1,1,5,47,9
+	.half	.L389-.L388
+	.byte	3,1,1,5,20,9
+	.half	.L387-.L389
+	.byte	1,5,59,7,9
+	.half	.L605-.L387
+	.byte	1,5,81,9
+	.half	.L31-.L605
+	.byte	1,5,53,9
+	.half	.L386-.L31
+	.byte	1,5,47,9
+	.half	.L32-.L386
+	.byte	3,1,1,5,26,9
+	.half	.L394-.L32
+	.byte	1,5,29,9
+	.half	.L395-.L394
+	.byte	3,2,1,5,32,9
+	.half	.L34-.L395
+	.byte	3,1,1,5,27,9
+	.half	.L606-.L34
+	.byte	1,5,23,9
+	.half	.L397-.L606
+	.byte	3,1,1,5,9,9
+	.half	.L607-.L397
+	.byte	1,5,45,7,9
+	.half	.L608-.L607
+	.byte	1,5,19,9
+	.half	.L35-.L608
+	.byte	3,1,1,5,30,9
+	.half	.L609-.L35
+	.byte	1,5,12,9
+	.half	.L610-.L609
+	.byte	3,1,1,5,19,9
+	.half	.L611-.L610
+	.byte	1,5,18,9
+	.half	.L612-.L611
+	.byte	3,1,1,5,16,9
+	.half	.L613-.L612
+	.byte	3,2,1,5,9,9
+	.half	.L614-.L613
+	.byte	1,5,28,7,9
+	.half	.L615-.L614
+	.byte	3,1,1,5,23,9
+	.half	.L616-.L615
+	.byte	1,5,29,9
+	.half	.L33-.L616
+	.byte	3,120,1,5,5,7,9
+	.half	.L617-.L33
+	.byte	3,11,1,5,43,7,9
+	.half	.L618-.L617
+	.byte	3,1,1,5,19,9
+	.half	.L399-.L618
+	.byte	1,5,9,9
+	.half	.L619-.L399
+	.byte	3,1,1,5,5,9
+	.half	.L37-.L619
+	.byte	3,3,1,5,1,9
+	.half	.L39-.L37
+	.byte	3,1,1,7,9
+	.half	.L197-.L39
+	.byte	0,1,1
+.L602:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_memset')
+	.sect	'.debug_ranges'
+.L196:
+	.word	-1,.L106,0,.L197-.L106,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_memcpy_into')
+	.sect	'.debug_info'
+.L198:
+	.word	407
+	.half	3
+	.word	.L199
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L201,.L200
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_memcpy_into',0,1,120,7
+	.word	.L280
+	.byte	1,1,1
+	.word	.L108,.L281,.L107
+	.byte	4
+	.byte	'dst',0,1,120,38
+	.word	.L228,.L282
+	.byte	4
+	.byte	'src',0,1,120,55
+	.word	.L257,.L283
+	.byte	4
+	.byte	'count',0,1,120,67
+	.word	.L230,.L284
+	.byte	5
+	.word	.L108,.L281
+	.byte	6
+	.byte	'u8src',0,1,121,20
+	.word	.L274,.L285
+	.byte	6
+	.byte	'bufend',0,1,122,20
+	.word	.L274,.L286
+	.byte	6
+	.byte	'overflow',0,1,123,9
+	.word	.L252,.L287
+	.byte	6
+	.byte	'nread',0,1,124,12
+	.word	.L230,.L288
+	.byte	5
+	.word	.L43,.L42
+	.byte	6
+	.byte	'n',0,1,127,16
+	.word	.L230,.L289
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_memcpy_into')
+	.sect	'.debug_abbrev'
+.L199:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_memcpy_into')
+	.sect	'.debug_line'
+.L200:
+	.word	.L621-.L620
+.L620:
+	.half	3
+	.word	.L623-.L622
+.L622:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L623:
+	.byte	5,7,7,0,5,2
+	.word	.L108
+	.byte	3,247,0,1,5,41,9
+	.half	.L409-.L108
+	.byte	3,2,1,5,27,9
+	.half	.L404-.L409
+	.byte	1,5,47,9
+	.half	.L412-.L404
+	.byte	3,1,1,5,26,9
+	.half	.L411-.L412
+	.byte	1,5,18,9
+	.half	.L414-.L411
+	.byte	3,1,1,5,26,9
+	.half	.L415-.L414
+	.byte	3,2,1,5,32,9
+	.half	.L43-.L415
+	.byte	3,1,1,5,27,9
+	.half	.L624-.L43
+	.byte	1,5,23,9
+	.half	.L417-.L624
+	.byte	3,1,1,5,9,9
+	.half	.L625-.L417
+	.byte	1,5,42,7,9
+	.half	.L626-.L625
+	.byte	1,5,19,9
+	.half	.L44-.L626
+	.byte	3,1,1,5,33,9
+	.half	.L627-.L44
+	.byte	1,5,42,9
+	.half	.L628-.L627
+	.byte	1,5,12,9
+	.half	.L419-.L628
+	.byte	3,1,1,5,19,9
+	.half	.L629-.L419
+	.byte	1,5,15,9
+	.half	.L630-.L629
+	.byte	3,1,1,5,16,9
+	.half	.L631-.L630
+	.byte	3,2,1,5,9,9
+	.half	.L632-.L631
+	.byte	1,5,28,7,9
+	.half	.L633-.L632
+	.byte	3,1,1,5,23,9
+	.half	.L634-.L633
+	.byte	1,5,26,9
+	.half	.L42-.L634
+	.byte	3,120,1,5,5,7,9
+	.half	.L635-.L42
+	.byte	3,11,1,5,43,7,9
+	.half	.L636-.L635
+	.byte	3,1,1,5,19,9
+	.half	.L421-.L636
+	.byte	1,5,9,9
+	.half	.L637-.L421
+	.byte	3,1,1,5,15,9
+	.half	.L46-.L637
+	.byte	3,3,1,5,5,9
+	.half	.L638-.L46
+	.byte	1,5,1,9
+	.half	.L48-.L638
+	.byte	3,1,1,7,9
+	.half	.L202-.L48
+	.byte	0,1,1
+.L621:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_memcpy_into')
+	.sect	'.debug_ranges'
+.L201:
+	.word	-1,.L108,0,.L202-.L108,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_memcpy_from')
+	.sect	'.debug_info'
+.L203:
+	.word	431
+	.half	3
+	.word	.L204
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L206,.L205
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_memcpy_from',0,1,145,1,7
+	.word	.L280
+	.byte	1,1,1
+	.word	.L110,.L290,.L109
+	.byte	4
+	.byte	'dst',0,1,145,1,33
+	.word	.L280,.L291
+	.byte	4
+	.byte	'src',0,1,145,1,49
+	.word	.L228,.L292
+	.byte	4
+	.byte	'count',0,1,145,1,61
+	.word	.L230,.L293
+	.byte	5
+	.word	.L110,.L290
+	.byte	6
+	.byte	'bytes_used',0,1,146,1,12
+	.word	.L230,.L294
+	.byte	5
+	.word	.L51,.L290
+	.byte	6
+	.byte	'u8dst',0,1,150,1,14
+	.word	.L238,.L295
+	.byte	6
+	.byte	'bufend',0,1,151,1,20
+	.word	.L274,.L296
+	.byte	6
+	.byte	'nwritten',0,1,152,1,12
+	.word	.L230,.L297
+	.byte	5
+	.word	.L54,.L53
+	.byte	6
+	.byte	'n',0,1,155,1,16
+	.word	.L230,.L298
+	.byte	0,0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_memcpy_from')
+	.sect	'.debug_abbrev'
+.L204:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_memcpy_from')
+	.sect	'.debug_line'
+.L205:
+	.word	.L640-.L639
+.L639:
+	.half	3
+	.word	.L642-.L641
+.L641:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L642:
+	.byte	5,7,7,0,5,2
+	.word	.L110
+	.byte	3,144,1,1,5,44,9
+	.half	.L428-.L110
+	.byte	3,1,1,5,5,9
+	.half	.L424-.L428
+	.byte	3,1,1,5,16,7,9
+	.half	.L643-.L424
+	.byte	3,1,1,5,9,9
+	.half	.L644-.L643
+	.byte	1,5,41,9
+	.half	.L51-.L644
+	.byte	3,3,1,5,27,9
+	.half	.L429-.L51
+	.byte	1,5,21,9
+	.half	.L431-.L429
+	.byte	3,1,1,5,29,9
+	.half	.L432-.L431
+	.byte	3,2,1,5,32,9
+	.half	.L54-.L432
+	.byte	3,1,1,5,27,9
+	.half	.L645-.L54
+	.byte	1,5,23,9
+	.half	.L434-.L645
+	.byte	3,1,1,5,9,9
+	.half	.L646-.L434
+	.byte	1,5,45,7,9
+	.half	.L647-.L646
+	.byte	1,5,22,9
+	.half	.L55-.L647
+	.byte	3,1,1,5,37,9
+	.half	.L648-.L55
+	.byte	1,5,45,9
+	.half	.L649-.L648
+	.byte	1,5,12,9
+	.half	.L436-.L649
+	.byte	3,1,1,5,19,9
+	.half	.L650-.L436
+	.byte	1,5,18,9
+	.half	.L651-.L650
+	.byte	3,1,1,5,16,9
+	.half	.L652-.L651
+	.byte	3,2,1,5,9,9
+	.half	.L653-.L652
+	.byte	1,5,28,7,9
+	.half	.L654-.L653
+	.byte	3,1,1,5,23,9
+	.half	.L655-.L654
+	.byte	1,5,29,9
+	.half	.L53-.L655
+	.byte	3,120,1,5,15,7,9
+	.half	.L656-.L53
+	.byte	3,11,1,5,5,9
+	.half	.L657-.L656
+	.byte	1,5,1,9
+	.half	.L52-.L657
+	.byte	3,1,1,7,9
+	.half	.L207-.L52
+	.byte	0,1,1
+.L640:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_memcpy_from')
+	.sect	'.debug_ranges'
+.L206:
+	.word	-1,.L110,0,.L207-.L110,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_copy')
+	.sect	'.debug_info'
+.L208:
+	.word	486
+	.half	3
+	.word	.L209
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L211,.L210
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_copy',0,1,168,1,7
+	.word	.L280
+	.byte	1,1,1
+	.word	.L112,.L299,.L111
+	.byte	4
+	.byte	'dst',0,1,168,1,31
+	.word	.L228,.L300
+	.byte	4
+	.byte	'src',0,1,168,1,47
+	.word	.L228,.L301
+	.byte	4
+	.byte	'count',0,1,168,1,59
+	.word	.L230,.L302
+	.byte	5
+	.word	.L112,.L299
+	.byte	6
+	.byte	'src_bytes_used',0,1,169,1,12
+	.word	.L230,.L303
+	.byte	5
+	.word	.L58,.L299
+	.byte	6
+	.byte	'overflow',0,1,173,1,9
+	.word	.L252,.L304
+	.byte	6
+	.byte	'src_bufend',0,1,174,1,20
+	.word	.L274,.L305
+	.byte	6
+	.byte	'dst_bufend',0,1,175,1,20
+	.word	.L274,.L306
+	.byte	6
+	.byte	'ncopied',0,1,176,1,12
+	.word	.L230,.L307
+	.byte	5
+	.word	.L61,.L60
+	.byte	6
+	.byte	'nsrc',0,1,179,1,16
+	.word	.L230,.L308
+	.byte	5
+	.word	.L62,.L60
+	.byte	6
+	.byte	'n',0,1,181,1,16
+	.word	.L230,.L309
+	.byte	0,0,0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_copy')
+	.sect	'.debug_abbrev'
+.L209:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_copy')
+	.sect	'.debug_line'
+.L210:
+	.word	.L659-.L658
+.L658:
+	.half	3
+	.word	.L661-.L660
+.L660:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L661:
+	.byte	5,7,7,0,5,2
+	.word	.L112
+	.byte	3,167,1,1,5,48,9
+	.half	.L444-.L112
+	.byte	3,1,1,5,5,9
+	.half	.L438-.L444
+	.byte	3,1,1,5,16,7,9
+	.half	.L662-.L438
+	.byte	3,1,1,5,9,9
+	.half	.L663-.L662
+	.byte	1,5,47,9
+	.half	.L58-.L663
+	.byte	3,2,1,5,26,9
+	.half	.L446-.L58
+	.byte	1,5,45,9
+	.half	.L448-.L446
+	.byte	3,1,1,5,31,9
+	.half	.L450-.L448
+	.byte	1,5,45,9
+	.half	.L452-.L450
+	.byte	3,1,1,5,31,9
+	.half	.L451-.L452
+	.byte	1,5,20,9
+	.half	.L454-.L451
+	.byte	3,1,1,5,28,9
+	.half	.L455-.L454
+	.byte	3,2,1,5,39,9
+	.half	.L61-.L455
+	.byte	3,1,1,5,34,9
+	.half	.L664-.L61
+	.byte	1,5,26,9
+	.half	.L457-.L664
+	.byte	3,1,1,5,9,9
+	.half	.L665-.L457
+	.byte	1,5,50,7,9
+	.half	.L666-.L665
+	.byte	1,5,36,9
+	.half	.L62-.L666
+	.byte	3,1,1,5,31,9
+	.half	.L667-.L62
+	.byte	1,5,9,9
+	.half	.L460-.L667
+	.byte	3,1,1,5,25,7,9
+	.half	.L668-.L460
+	.byte	1,5,19,9
+	.half	.L63-.L668
+	.byte	3,1,1,5,30,9
+	.half	.L669-.L63
+	.byte	1,5,38,9
+	.half	.L670-.L669
+	.byte	1,5,12,9
+	.half	.L458-.L670
+	.byte	3,1,1,5,19,9
+	.half	.L671-.L458
+	.byte	1,5,12,9
+	.half	.L672-.L671
+	.byte	3,1,1,5,19,9
+	.half	.L673-.L672
+	.byte	1,5,17,9
+	.half	.L674-.L673
+	.byte	3,1,1,5,16,9
+	.half	.L675-.L674
+	.byte	3,2,1,5,9,9
+	.half	.L676-.L675
+	.byte	1,5,28,7,9
+	.half	.L677-.L676
+	.byte	3,1,1,5,23,9
+	.half	.L678-.L677
+	.byte	1,5,16,9
+	.half	.L64-.L678
+	.byte	3,1,1,5,9,9
+	.half	.L679-.L64
+	.byte	1,5,28,7,9
+	.half	.L680-.L679
+	.byte	3,1,1,5,23,9
+	.half	.L681-.L680
+	.byte	1,5,28,9
+	.half	.L60-.L681
+	.byte	3,115,1,5,5,7,9
+	.half	.L682-.L60
+	.byte	3,16,1,5,43,7,9
+	.half	.L683-.L682
+	.byte	3,1,1,5,19,9
+	.half	.L463-.L683
+	.byte	1,5,9,9
+	.half	.L684-.L463
+	.byte	3,1,1,5,15,9
+	.half	.L66-.L684
+	.byte	3,3,1,5,5,9
+	.half	.L685-.L66
+	.byte	1,5,1,9
+	.half	.L59-.L685
+	.byte	3,1,1,7,9
+	.half	.L212-.L59
+	.byte	0,1,1
+.L659:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_copy')
+	.sect	'.debug_ranges'
+.L211:
+	.word	-1,.L112,0,.L212-.L112,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_findchr')
+	.sect	'.debug_info'
+.L213:
+	.word	413
+	.half	3
+	.word	.L214
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L216,.L215
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_findchr',0,1,77,8
+	.word	.L230
+	.byte	1,1,1
+	.word	.L104,.L310,.L103
+	.byte	4
+	.byte	'rb',0,1,77,41
+	.word	.L244,.L311
+	.byte	4
+	.byte	'c',0,1,77,49
+	.word	.L252,.L312
+	.byte	4
+	.byte	'offset',0,1,77,59
+	.word	.L230,.L313
+	.byte	5
+	.word	.L104,.L310
+	.byte	6
+	.byte	'bufend',0,1,78,20
+	.word	.L274,.L314
+	.byte	6
+	.byte	'bytes_used',0,1,79,12
+	.word	.L230,.L315
+	.byte	5
+	.word	.L25,.L310
+	.byte	6
+	.byte	'start',0,1,83,20
+	.word	.L274,.L316
+	.byte	6
+	.byte	'n',0,1,84,12
+	.word	.L230,.L317
+	.byte	5
+	.word	.L27,.L310
+	.byte	6
+	.byte	'found',0,1,88,20
+	.word	.L274,.L318
+	.byte	0,0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_findchr')
+	.sect	'.debug_abbrev'
+.L214:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_findchr')
+	.sect	'.debug_line'
+.L215:
+	.word	.L687-.L686
+.L686:
+	.half	3
+	.word	.L689-.L688
+.L688:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L689:
+	.byte	5,8,7,0,5,2
+	.word	.L104
+	.byte	3,204,0,1,5,41,9
+	.half	.L364-.L104
+	.byte	3,1,1,5,27,9
+	.half	.L360-.L364
+	.byte	1,5,44,9
+	.half	.L366-.L360
+	.byte	3,1,1,5,23,9
+	.half	.L365-.L366
+	.byte	1,5,5,9
+	.half	.L369-.L365
+	.byte	3,1,1,5,9,7,9
+	.half	.L690-.L369
+	.byte	3,1,1,5,30,9
+	.half	.L25-.L690
+	.byte	3,2,1,5,43,9
+	.half	.L691-.L25
+	.byte	1,5,54,9
+	.half	.L692-.L691
+	.byte	1,5,50,9
+	.half	.L693-.L692
+	.byte	1,5,61,9
+	.half	.L694-.L693
+	.byte	1,5,93,9
+	.half	.L695-.L694
+	.byte	1,5,71,9
+	.half	.L368-.L695
+	.byte	1,5,36,9
+	.half	.L696-.L368
+	.byte	1,5,23,9
+	.half	.L371-.L696
+	.byte	3,1,1,5,24,9
+	.half	.L373-.L371
+	.byte	3,1,1,5,5,9
+	.half	.L697-.L373
+	.byte	1,5,24,7,9
+	.half	.L698-.L697
+	.byte	3,1,1,5,45,9
+	.half	.L27-.L698
+	.byte	3,2,1,5,5,9
+	.half	.L375-.L27
+	.byte	3,1,1,5,32,7,9
+	.half	.L699-.L375
+	.byte	3,1,1,5,23,9
+	.half	.L700-.L699
+	.byte	1,5,9,9
+	.half	.L701-.L700
+	.byte	1,5,46,9
+	.half	.L28-.L701
+	.byte	3,2,1,5,9,9
+	.half	.L376-.L28
+	.byte	1,5,1,9
+	.half	.L26-.L376
+	.byte	3,1,1,7,9
+	.half	.L217-.L26
+	.byte	0,1,1
+.L687:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_findchr')
+	.sect	'.debug_ranges'
+.L216:
+	.word	-1,.L104,0,.L217-.L104,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_end')
+	.sect	'.debug_info'
+.L218:
+	.word	262
+	.half	3
+	.word	.L219
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L221,.L220
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_end',0,1,41,23
+	.word	.L274
+	.byte	1,1
+	.word	.L88,.L319,.L87
+	.byte	4
+	.byte	'rb',0,1,41,52
+	.word	.L244,.L320
+	.byte	5
+	.word	.L88,.L319
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_end')
+	.sect	'.debug_abbrev'
+.L219:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_end')
+	.sect	'.debug_line'
+.L220:
+	.word	.L703-.L702
+.L702:
+	.half	3
+	.word	.L705-.L704
+.L704:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L705:
+	.byte	5,14,7,0,5,2
+	.word	.L88
+	.byte	3,41,1,5,42,9
+	.half	.L706-.L88
+	.byte	1,5,20,9
+	.half	.L337-.L706
+	.byte	1,5,5,9
+	.half	.L707-.L337
+	.byte	1,5,1,9
+	.half	.L11-.L707
+	.byte	3,1,1,7,9
+	.half	.L222-.L11
+	.byte	0,1,1
+.L703:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_end')
+	.sect	'.debug_ranges'
+.L221:
+	.word	-1,.L88,0,.L222-.L88,0,0
+	.sdecl	'.debug_info',debug,cluster('ringbuf_nextp')
+	.sect	'.debug_info'
+.L223:
+	.word	278
+	.half	3
+	.word	.L224
+	.byte	4,1
+	.byte	'../ringbuf.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\admin\\AURIX-v1.10.6-workspace\\Ethernet_1_KIT_TC397_TFT\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
+	.word	.L226,.L225
+	.byte	2
+	.word	.L119
+	.byte	3
+	.byte	'ringbuf_nextp',0,1,72,17
+	.word	.L238
+	.byte	1,1
+	.word	.L102,.L321,.L101
+	.byte	4
+	.byte	'rb',0,1,72,42
+	.word	.L228,.L322
+	.byte	4
+	.byte	'p',0,1,72,61
+	.word	.L274,.L323
+	.byte	5
+	.word	.L102,.L321
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ringbuf_nextp')
+	.sect	'.debug_abbrev'
+.L224:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ringbuf_nextp')
+	.sect	'.debug_line'
+.L225:
+	.word	.L709-.L708
+.L708:
+	.half	3
+	.word	.L711-.L710
+.L710:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../ringbuf.c',0,0,0,0,0
+.L711:
+	.byte	5,17,7,0,5,2
+	.word	.L102
+	.byte	3,199,0,1,5,5,9
+	.half	.L354-.L102
+	.byte	3,1,1,5,24,9
+	.half	.L23-.L354
+	.byte	3,1,1,5,14,9
+	.half	.L712-.L23
+	.byte	1,5,32,9
+	.half	.L713-.L712
+	.byte	1,5,28,9
+	.half	.L714-.L713
+	.byte	1,5,61,9
+	.half	.L715-.L714
+	.byte	1,5,39,9
+	.half	.L359-.L715
+	.byte	1,5,20,9
+	.half	.L716-.L359
+	.byte	1,5,5,9
+	.half	.L717-.L716
+	.byte	1,5,1,9
+	.half	.L22-.L717
+	.byte	3,1,1,7,9
+	.half	.L227-.L22
+	.byte	0,1,1
+.L709:
+	.sdecl	'.debug_ranges',debug,cluster('ringbuf_nextp')
+	.sect	'.debug_ranges'
+.L226:
+	.word	-1,.L102,0,.L227-.L102,0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_buffer_size')
+	.sect	'.debug_loc'
+.L247:
+	.word	-1,.L84,0,.L246-.L84
+	.half	1
+	.byte	100
+	.word	0,0
+.L83:
+	.word	-1,.L84,0,.L246-.L84
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_bytes_free')
+	.sect	'.debug_loc'
+.L249:
+	.word	-1,.L90,0,.L338-.L90
+	.half	1
+	.byte	100
+	.word	.L339-.L90,.L248-.L90
+	.half	1
+	.byte	111
+	.word	.L12-.L90,.L13-.L90
+	.half	1
+	.byte	100
+	.word	0,0
+.L89:
+	.word	-1,.L90,0,.L248-.L90
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_bytes_used')
+	.sect	'.debug_loc'
+.L251:
+	.word	-1,.L92,0,.L340-.L92
+	.half	1
+	.byte	100
+	.word	.L341-.L92,.L250-.L92
+	.half	1
+	.byte	111
+	.word	.L342-.L92,.L343-.L92
+	.half	1
+	.byte	100
+	.word	0,0
+.L91:
+	.word	-1,.L92,0,.L250-.L92
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_capacity')
+	.sect	'.debug_loc'
+.L245:
+	.word	-1,.L86,0,.L336-.L86
+	.half	1
+	.byte	100
+	.word	0,0
+.L85:
+	.word	-1,.L86,0,.L243-.L86
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_copy')
+	.sect	'.debug_loc'
+.L302:
+	.word	-1,.L112,0,.L438-.L112
+	.half	1
+	.byte	84
+	.word	.L444-.L112,.L445-.L112
+	.half	1
+	.byte	95
+	.word	.L66-.L112,.L59-.L112
+	.half	1
+	.byte	95
+	.word	0,0
+.L300:
+	.word	-1,.L112,0,.L439-.L112
+	.half	1
+	.byte	100
+	.word	.L440-.L112,.L441-.L112
+	.half	1
+	.byte	111
+	.word	.L447-.L112,.L446-.L112
+	.half	1
+	.byte	100
+	.word	.L453-.L112,.L451-.L112
+	.half	1
+	.byte	100
+	.word	.L462-.L112,.L463-.L112
+	.half	1
+	.byte	100
+	.word	.L464-.L112,.L465-.L112
+	.half	1
+	.byte	100
+	.word	.L66-.L112,.L59-.L112
+	.half	1
+	.byte	111
+	.word	0,0
+.L306:
+	.word	-1,.L112,.L451-.L112,.L61-.L112
+	.half	1
+	.byte	98
+	.word	.L454-.L112,.L443-.L112
+	.half	1
+	.byte	110
+	.word	.L66-.L112,.L59-.L112
+	.half	1
+	.byte	110
+	.word	0,0
+.L309:
+	.word	-1,.L112,.L459-.L112,.L63-.L112
+	.half	1
+	.byte	98
+	.word	.L460-.L112,.L60-.L112
+	.half	1
+	.byte	90
+	.word	.L461-.L112,.L458-.L112
+	.half	1
+	.byte	84
+	.word	0,0
+.L307:
+	.word	-1,.L112,.L455-.L112,.L443-.L112
+	.half	1
+	.byte	89
+	.word	.L66-.L112,.L59-.L112
+	.half	1
+	.byte	89
+	.word	0,0
+.L308:
+	.word	-1,.L112,.L456-.L112,.L62-.L112
+	.half	1
+	.byte	98
+	.word	.L457-.L112,.L458-.L112
+	.half	5
+	.byte	144,32,157,32,0
+	.word	0,0
+.L304:
+	.word	-1,.L112,.L448-.L112,.L443-.L112
+	.half	1
+	.byte	88
+	.word	.L66-.L112,.L59-.L112
+	.half	1
+	.byte	88
+	.word	0,0
+.L111:
+	.word	-1,.L112,0,.L437-.L112
+	.half	2
+	.byte	138,0
+	.word	.L437-.L112,.L299-.L112
+	.half	2
+	.byte	138,16
+	.word	.L299-.L112,.L299-.L112
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L301:
+	.word	-1,.L112,0,.L439-.L112
+	.half	1
+	.byte	101
+	.word	.L442-.L112,.L443-.L112
+	.half	1
+	.byte	108
+	.word	.L439-.L112,.L438-.L112
+	.half	1
+	.byte	100
+	.word	.L449-.L112,.L450-.L112
+	.half	1
+	.byte	100
+	.word	.L66-.L112,.L299-.L112
+	.half	1
+	.byte	108
+	.word	0,0
+.L305:
+	.word	-1,.L112,.L450-.L112,.L451-.L112
+	.half	1
+	.byte	98
+	.word	.L452-.L112,.L443-.L112
+	.half	1
+	.byte	109
+	.word	.L66-.L112,.L59-.L112
+	.half	1
+	.byte	109
+	.word	0,0
+.L303:
+	.word	-1,.L112,.L438-.L112,.L446-.L112
+	.half	1
+	.byte	82
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_end')
+	.sect	'.debug_loc'
+.L320:
+	.word	-1,.L88,0,.L337-.L88
+	.half	1
+	.byte	100
+	.word	0,0
+.L87:
+	.word	-1,.L88,0,.L319-.L88
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_findchr')
+	.sect	'.debug_loc'
+.L314:
+	.word	-1,.L104,.L360-.L104,.L365-.L104
+	.half	1
+	.byte	98
+	.word	.L366-.L104,.L310-.L104
+	.half	1
+	.byte	108
+	.word	0,0
+.L315:
+	.word	-1,.L104,.L365-.L104,.L368-.L104
+	.half	1
+	.byte	82
+	.word	.L369-.L104,.L310-.L104
+	.half	1
+	.byte	91
+	.word	0,0
+.L312:
+	.word	-1,.L104,0,.L360-.L104
+	.half	1
+	.byte	84
+	.word	.L363-.L104,.L310-.L104
+	.half	1
+	.byte	89
+	.word	.L378-.L104,.L376-.L104
+	.half	1
+	.byte	84
+	.word	0,0
+.L318:
+	.word	-1,.L104,.L375-.L104,.L376-.L104
+	.half	1
+	.byte	98
+	.word	0,0
+.L317:
+	.word	-1,.L104,.L372-.L104,.L27-.L104
+	.half	1
+	.byte	98
+	.word	.L373-.L104,.L26-.L104
+	.half	1
+	.byte	95
+	.word	0,0
+.L313:
+	.word	-1,.L104,0,.L360-.L104
+	.half	1
+	.byte	85
+	.word	.L364-.L104,.L310-.L104
+	.half	1
+	.byte	90
+	.word	0,0
+.L311:
+	.word	-1,.L104,0,.L360-.L104
+	.half	1
+	.byte	100
+	.word	.L361-.L104,.L362-.L104
+	.half	1
+	.byte	111
+	.word	.L367-.L104,.L365-.L104
+	.half	1
+	.byte	100
+	.word	.L370-.L104,.L368-.L104
+	.half	1
+	.byte	100
+	.word	.L28-.L104,.L26-.L104
+	.half	1
+	.byte	111
+	.word	.L377-.L104,.L376-.L104
+	.half	1
+	.byte	100
+	.word	0,0
+.L103:
+	.word	-1,.L104,0,.L310-.L104
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L316:
+	.word	-1,.L104,.L371-.L104,.L26-.L104
+	.half	1
+	.byte	109
+	.word	.L374-.L104,.L375-.L104
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_free')
+	.sect	'.debug_loc'
+.L235:
+	.word	-1,.L82,0,.L334-.L82
+	.half	1
+	.byte	100
+	.word	.L335-.L82,.L233-.L82
+	.half	1
+	.byte	111
+	.word	0,0
+.L81:
+	.word	-1,.L82,0,.L233-.L82
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_get')
+	.sect	'.debug_loc'
+.L269:
+	.word	-1,.L118,0,.L267-.L118
+	.half	1
+	.byte	101
+	.word	0,0
+.L268:
+	.word	-1,.L118,0,.L267-.L118
+	.half	1
+	.byte	100
+	.word	0,0
+.L117:
+	.word	-1,.L118,0,.L267-.L118
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_head')
+	.sect	'.debug_loc'
+.L261:
+	.word	-1,.L100,0,.L260-.L100
+	.half	1
+	.byte	100
+	.word	0,0
+.L99:
+	.word	-1,.L100,0,.L260-.L100
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_init')
+	.sect	'.debug_loc'
+.L239:
+	.word	-1,.L114,0,.L236-.L114
+	.half	1
+	.byte	101
+	.word	0,0
+.L237:
+	.word	-1,.L114,0,.L236-.L114
+	.half	1
+	.byte	100
+	.word	0,0
+.L113:
+	.word	-1,.L114,0,.L236-.L114
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L240:
+	.word	-1,.L114,0,.L236-.L114
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_is_empty')
+	.sect	'.debug_loc'
+.L256:
+	.word	-1,.L96,0,.L345-.L96
+	.half	1
+	.byte	100
+	.word	.L346-.L96,.L255-.L96
+	.half	1
+	.byte	111
+	.word	.L347-.L96,.L348-.L96
+	.half	1
+	.byte	100
+	.word	0,0
+.L95:
+	.word	-1,.L96,0,.L255-.L96
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_is_full')
+	.sect	'.debug_loc'
+.L254:
+	.word	-1,.L94,0,.L344-.L94
+	.half	1
+	.byte	100
+	.word	0,0
+.L93:
+	.word	-1,.L94,0,.L253-.L94
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_memcpy_from')
+	.sect	'.debug_loc'
+.L296:
+	.word	-1,.L110,.L429-.L110,.L54-.L110
+	.half	1
+	.byte	98
+	.word	.L431-.L110,.L52-.L110
+	.half	1
+	.byte	109
+	.word	0,0
+.L294:
+	.word	-1,.L110,.L424-.L110,.L429-.L110
+	.half	1
+	.byte	82
+	.word	0,0
+.L293:
+	.word	-1,.L110,0,.L424-.L110
+	.half	1
+	.byte	84
+	.word	.L428-.L110,.L290-.L110
+	.half	1
+	.byte	95
+	.word	0,0
+.L291:
+	.word	-1,.L110,0,.L425-.L110
+	.half	1
+	.byte	100
+	.word	.L426-.L110,.L290-.L110
+	.half	1
+	.byte	108
+	.word	0,0
+.L298:
+	.word	-1,.L110,.L433-.L110,.L55-.L110
+	.half	1
+	.byte	98
+	.word	.L434-.L110,.L53-.L110
+	.half	1
+	.byte	89
+	.word	.L435-.L110,.L436-.L110
+	.half	1
+	.byte	84
+	.word	0,0
+.L297:
+	.word	-1,.L110,.L432-.L110,.L52-.L110
+	.half	1
+	.byte	88
+	.word	0,0
+.L109:
+	.word	-1,.L110,0,.L290-.L110
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L292:
+	.word	-1,.L110,0,.L425-.L110
+	.half	1
+	.byte	101
+	.word	.L427-.L110,.L290-.L110
+	.half	1
+	.byte	111
+	.word	.L425-.L110,.L424-.L110
+	.half	1
+	.byte	100
+	.word	.L430-.L110,.L429-.L110
+	.half	1
+	.byte	100
+	.word	0,0
+.L295:
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_memcpy_into')
+	.sect	'.debug_loc'
+.L286:
+	.word	-1,.L108,.L404-.L108,.L411-.L108
+	.half	1
+	.byte	98
+	.word	.L412-.L108,.L408-.L108
+	.half	1
+	.byte	109
+	.word	.L46-.L108,.L281-.L108
+	.half	1
+	.byte	109
+	.word	0,0
+.L284:
+	.word	-1,.L108,0,.L404-.L108
+	.half	1
+	.byte	84
+	.word	.L409-.L108,.L410-.L108
+	.half	1
+	.byte	95
+	.word	.L46-.L108,.L48-.L108
+	.half	1
+	.byte	95
+	.word	0,0
+.L282:
+	.word	-1,.L108,0,.L404-.L108
+	.half	1
+	.byte	100
+	.word	.L405-.L108,.L406-.L108
+	.half	1
+	.byte	111
+	.word	.L413-.L108,.L411-.L108
+	.half	1
+	.byte	100
+	.word	.L420-.L108,.L421-.L108
+	.half	1
+	.byte	100
+	.word	.L422-.L108,.L423-.L108
+	.half	1
+	.byte	100
+	.word	.L46-.L108,.L48-.L108
+	.half	1
+	.byte	111
+	.word	0,0
+.L289:
+	.word	-1,.L108,.L416-.L108,.L44-.L108
+	.half	1
+	.byte	98
+	.word	.L417-.L108,.L42-.L108
+	.half	1
+	.byte	90
+	.word	.L418-.L108,.L419-.L108
+	.half	1
+	.byte	84
+	.word	0,0
+.L288:
+	.word	-1,.L108,.L415-.L108,.L408-.L108
+	.half	1
+	.byte	89
+	.word	.L46-.L108,.L281-.L108
+	.half	1
+	.byte	89
+	.word	0,0
+.L287:
+	.word	-1,.L108,.L414-.L108,.L408-.L108
+	.half	1
+	.byte	88
+	.word	.L46-.L108,.L281-.L108
+	.half	1
+	.byte	88
+	.word	0,0
+.L107:
+	.word	-1,.L108,0,.L403-.L108
+	.half	2
+	.byte	138,0
+	.word	.L403-.L108,.L281-.L108
+	.half	2
+	.byte	138,16
+	.word	.L281-.L108,.L281-.L108
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L283:
+	.word	-1,.L108,0,.L404-.L108
+	.half	1
+	.byte	101
+	.word	.L407-.L108,.L408-.L108
+	.half	1
+	.byte	108
+	.word	.L46-.L108,.L281-.L108
+	.half	1
+	.byte	108
+	.word	0,0
+.L285:
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_memset')
+	.sect	'.debug_loc'
+.L275:
+	.word	-1,.L106,.L380-.L106,.L387-.L106
+	.half	1
+	.byte	98
+	.word	.L388-.L106,.L384-.L106
+	.half	1
+	.byte	108
+	.word	.L37-.L106,.L270-.L106
+	.half	1
+	.byte	108
+	.word	0,0
+.L272:
+	.word	-1,.L106,0,.L380-.L106
+	.half	1
+	.byte	84
+	.word	.L383-.L106,.L384-.L106
+	.half	1
+	.byte	88
+	.word	.L37-.L106,.L270-.L106
+	.half	1
+	.byte	88
+	.word	0,0
+.L277:
+	.word	0,0
+.L271:
+	.word	-1,.L106,0,.L380-.L106
+	.half	1
+	.byte	100
+	.word	.L381-.L106,.L382-.L106
+	.half	1
+	.byte	111
+	.word	.L390-.L106,.L387-.L106
+	.half	1
+	.byte	100
+	.word	.L391-.L106,.L386-.L106
+	.half	1
+	.byte	100
+	.word	.L393-.L106,.L394-.L106
+	.half	1
+	.byte	100
+	.word	.L398-.L106,.L399-.L106
+	.half	1
+	.byte	100
+	.word	.L400-.L106,.L401-.L106
+	.half	1
+	.byte	100
+	.word	.L37-.L106,.L39-.L106
+	.half	1
+	.byte	111
+	.word	0,0
+.L273:
+	.word	-1,.L106,0,.L380-.L106
+	.half	1
+	.byte	85
+	.word	.L385-.L106,.L386-.L106
+	.half	1
+	.byte	95
+	.word	.L386-.L106,.L32-.L106
+	.half	1
+	.byte	82
+	.word	.L32-.L106,.L392-.L106
+	.half	1
+	.byte	95
+	.word	.L37-.L106,.L39-.L106
+	.half	1
+	.byte	95
+	.word	.L402-.L106,.L39-.L106
+	.half	1
+	.byte	82
+	.word	0,0
+.L279:
+	.word	-1,.L106,.L396-.L106,.L35-.L106
+	.half	1
+	.byte	98
+	.word	.L397-.L106,.L33-.L106
+	.half	1
+	.byte	91
+	.word	0,0
+.L276:
+	.word	-1,.L106,.L389-.L106,.L384-.L106
+	.half	1
+	.byte	89
+	.word	.L37-.L106,.L270-.L106
+	.half	1
+	.byte	89
+	.word	0,0
+.L278:
+	.word	-1,.L106,.L395-.L106,.L384-.L106
+	.half	1
+	.byte	90
+	.word	.L37-.L106,.L270-.L106
+	.half	1
+	.byte	90
+	.word	0,0
+.L105:
+	.word	-1,.L106,0,.L379-.L106
+	.half	2
+	.byte	138,0
+	.word	.L379-.L106,.L270-.L106
+	.half	2
+	.byte	138,16
+	.word	.L270-.L106,.L270-.L106
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_new')
+	.sect	'.debug_loc'
+.L231:
+	.word	-1,.L78,0,.L324-.L78
+	.half	1
+	.byte	84
+	.word	.L325-.L78,.L229-.L78
+	.half	1
+	.byte	88
+	.word	0,0
+.L232:
+	.word	-1,.L78,.L326-.L78,.L327-.L78
+	.half	1
+	.byte	98
+	.word	.L328-.L78,.L229-.L78
+	.half	1
+	.byte	111
+	.word	.L329-.L78,.L330-.L78
+	.half	1
+	.byte	100
+	.word	.L331-.L78,.L332-.L78
+	.half	1
+	.byte	100
+	.word	.L333-.L78,.L5-.L78
+	.half	1
+	.byte	98
+	.word	0,0
+.L77:
+	.word	-1,.L78,0,.L229-.L78
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_nextp')
+	.sect	'.debug_loc'
+.L323:
+	.word	-1,.L102,0,.L350-.L102
+	.half	1
+	.byte	101
+	.word	.L354-.L102,.L355-.L102
+	.half	1
+	.byte	111
+	.word	.L350-.L102,.L356-.L102
+	.half	1
+	.byte	95
+	.word	.L23-.L102,.L357-.L102
+	.half	1
+	.byte	111
+	.word	0,0
+.L322:
+	.word	-1,.L102,0,.L351-.L102
+	.half	1
+	.byte	100
+	.word	.L352-.L102,.L353-.L102
+	.half	1
+	.byte	108
+	.word	.L23-.L102,.L321-.L102
+	.half	1
+	.byte	108
+	.word	.L358-.L102,.L359-.L102
+	.half	1
+	.byte	100
+	.word	0,0
+.L101:
+	.word	-1,.L102,0,.L349-.L102
+	.half	2
+	.byte	138,0
+	.word	.L349-.L102,.L321-.L102
+	.half	2
+	.byte	138,16
+	.word	.L321-.L102,.L321-.L102
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_put')
+	.sect	'.debug_loc'
+.L265:
+	.word	-1,.L116,0,.L262-.L116
+	.half	1
+	.byte	84
+	.word	0,0
+.L266:
+	.word	-1,.L116,.L466-.L116,.L262-.L116
+	.half	1
+	.byte	81
+	.word	0,0
+.L263:
+	.word	-1,.L116,0,.L262-.L116
+	.half	1
+	.byte	100
+	.word	0,0
+.L115:
+	.word	-1,.L116,0,.L262-.L116
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_reset')
+	.sect	'.debug_loc'
+.L242:
+	.word	-1,.L80,0,.L241-.L80
+	.half	1
+	.byte	100
+	.word	0,0
+.L79:
+	.word	-1,.L80,0,.L241-.L80
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ringbuf_tail')
+	.sect	'.debug_loc'
+.L259:
+	.word	-1,.L98,0,.L258-.L98
+	.half	1
+	.byte	100
+	.word	0,0
+.L97:
+	.word	-1,.L98,0,.L258-.L98
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L718:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_new')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L718,.L78,.L229-.L78
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_reset')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L718,.L80,.L241-.L80
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_free')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L718,.L82,.L233-.L82
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_buffer_size')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L718,.L84,.L246-.L84
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_capacity')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L718,.L86,.L243-.L86
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_end')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L718,.L88,.L319-.L88
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_bytes_free')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L718,.L90,.L248-.L90
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_bytes_used')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L718,.L92,.L250-.L92
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_is_full')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L718,.L94,.L253-.L94
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_is_empty')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L718,.L96,.L255-.L96
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_tail')
+	.sect	'.debug_frame'
+	.word	20
+	.word	.L718,.L98,.L258-.L98
+	.byte	8,19,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_head')
+	.sect	'.debug_frame'
+	.word	20
+	.word	.L718,.L100,.L260-.L100
+	.byte	8,19,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_nextp')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L718,.L102,.L321-.L102
+	.byte	4
+	.word	(.L349-.L102)/2
+	.byte	19,16,22,26,3,19,138,16,4
+	.word	(.L321-.L349)/2
+	.byte	19,0,8,26,0,0
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_findchr')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L718,.L104,.L310-.L104
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_memset')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L718,.L106,.L270-.L106
+	.byte	4
+	.word	(.L379-.L106)/2
+	.byte	19,16,22,26,3,19,138,16,4
+	.word	(.L270-.L379)/2
+	.byte	19,0,8,26,0,0
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_memcpy_into')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L718,.L108,.L281-.L108
+	.byte	4
+	.word	(.L403-.L108)/2
+	.byte	19,16,22,26,3,19,138,16,4
+	.word	(.L281-.L403)/2
+	.byte	19,0,8,26,0,0
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_memcpy_from')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L718,.L110,.L290-.L110
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_copy')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L718,.L112,.L299-.L112
+	.byte	4
+	.word	(.L437-.L112)/2
+	.byte	19,16,22,26,3,19,138,16,4
+	.word	(.L299-.L437)/2
+	.byte	19,0,8,26,0,0
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_init')
+	.sect	'.debug_frame'
+	.word	20
+	.word	.L718,.L114,.L236-.L114
+	.byte	8,18,8,19,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_put')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L718,.L116,.L262-.L116
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('ringbuf_get')
+	.sect	'.debug_frame'
+	.word	20
+	.word	.L718,.L118,.L267-.L118
+	.byte	8,19,8,22,8,23,0,0
+	; Module end
