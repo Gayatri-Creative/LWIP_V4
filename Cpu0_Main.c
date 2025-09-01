@@ -100,11 +100,41 @@ void core0_main (void)
     Ifx_Lwip_init(ethAddr);                                 /* Initialize LwIP with the MAC address                         */
 
     echoInit();                                             /* Initialize ECHO application                                  */
+    ip4_addr_t ipv4_server_addr;
+           IP4_ADDR(&ipv4_server_addr, 172,16,9,138);          // Replace with your laptop/server IP
+
+
+           ip_addr_t server_ip;
+           ip_addr_copy_from_ip4(server_ip, ipv4_server_addr);
+#if LWIP_IPV6
+           ip6_addr_t ipv6_server_addr;
+
+           // Set IPv6 server IP
+               ip6addr_aton("fe80::b5b4:68a1:9644:89db", &ipv6_server_addr);  // Replace with your IPv6 server link-local/global address
+#endif
+
+
 
     while (1)
     {
         Ifx_Lwip_pollTimerFlags();                          /* Poll LwIP timers and trigger protocols execution if required */
         Ifx_Lwip_pollReceiveFlags();                        /* Receive data package through ETH                             */
+
+        if (dhcp_supplied_address(&g_Lwip.netif))
+                          {
+                              tcp_client_poll_reconnect_ipv4(&server_ip, 5000);
+                          }
+      #if LWIP_IPV6
+              // Check if IPv6 is valid (like link-local auto-configured)
+                         if (!ip6_addr_isany(netif_ip6_addr(&g_Lwip.netif, 0)))  // index 0 is link-local
+                         {
+                            // Ifx_Lwip_printf("[MAIN] Polling IPv6 reconnect...\n");
+                             tcp_client_poll_reconnect_ipv6(&ipv6_server_addr, 5000);
+                         }
+      #endif
+
+
+
     }
 }
 

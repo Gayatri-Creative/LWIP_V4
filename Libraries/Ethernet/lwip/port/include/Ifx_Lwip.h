@@ -166,7 +166,8 @@ IFX_INLINE netif_t *Ifx_Lwip_getNetIf(void)
 /** \brief Returns pointer to the actual IP address */
 IFX_INLINE uint8 *Ifx_Lwip_getIpAddrPtr(void)
 {
-    return (uint8 *)&g_Lwip.netif.ip_addr.addr;
+    return (uint8 *)ip_2_ip4(netif_ip_addr4(&g_Lwip.netif));
+    //return (uint8 *)&g_Lwip.netif.ip_addr.addr;
 }
 
 

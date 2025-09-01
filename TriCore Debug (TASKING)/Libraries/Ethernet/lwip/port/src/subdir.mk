@@ -22,11 +22,11 @@ OBJS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 "Libraries/Ethernet/lwip/port/src/Ifx_Lwip.src":"../Libraries/Ethernet/lwip/port/src/Ifx_Lwip.c" "Libraries/Ethernet/lwip/port/src/subdir.mk"
-	cctc -cs --dep-file="$*.d" --misrac-version=2004 -D__CPU__=tc39xb "-fC:/Users/admin/AURIX-v1.10.6-workspace/Ethernet_1_KIT_TC397_TFT/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc39xb -Y0 -N0 -Z0 -o "$@" "$<"
+	cctc -cs --dep-file="$*.d" --misrac-version=2004 -D__CPU__=tc39xb "-fC:/Users/admin/AURIX-v1.10.10-workspace/V6_V4_TCPIP/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc39xb -Y0 -N0 -Z0 -o "$@" "$<"
 "Libraries/Ethernet/lwip/port/src/Ifx_Lwip.o":"Libraries/Ethernet/lwip/port/src/Ifx_Lwip.src" "Libraries/Ethernet/lwip/port/src/subdir.mk"
 	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
 "Libraries/Ethernet/lwip/port/src/netif.src":"../Libraries/Ethernet/lwip/port/src/netif.c" "Libraries/Ethernet/lwip/port/src/subdir.mk"
-	cctc -cs --dep-file="$*.d" --misrac-version=2004 -D__CPU__=tc39xb "-fC:/Users/admin/AURIX-v1.10.6-workspace/Ethernet_1_KIT_TC397_TFT/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc39xb -Y0 -N0 -Z0 -o "$@" "$<"
+	cctc -cs --dep-file="$*.d" --misrac-version=2004 -D__CPU__=tc39xb "-fC:/Users/admin/AURIX-v1.10.10-workspace/V6_V4_TCPIP/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc39xb -Y0 -N0 -Z0 -o "$@" "$<"
 "Libraries/Ethernet/lwip/port/src/netif.o":"Libraries/Ethernet/lwip/port/src/netif.src" "Libraries/Ethernet/lwip/port/src/subdir.mk"
 	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
 
